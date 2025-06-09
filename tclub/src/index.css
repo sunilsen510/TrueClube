@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+
+
+  --btn-primary-bg: #006AF2;
+  --btn-primary-hover: #006AF2;
+  --btn-primary-text: #ffffff;
+ 
+
+
+  --btn-outline-bg: transparent;
+  --btn-outline-hover: #F5F7F9;
+  --btn-outline-text: white;
+  --btn-outline-border: #006AF2;
+}
+
+a {
+  text-decoration: inherit;
+  
+}
+a:hover {
+  color: #000000;
+}
+
+body {
+  margin: 0;
+  /* display: flex;
+  place-items: center; */
+  /* min-width: 320px;
+  min-height: 100vh; */
+  background-color: white;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+
+button:focus,
+button:focus-visible {
+  outline: 0px auto -webkit-focus-ring-color;
+}
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
