@@ -14,7 +14,7 @@ const HeroBanner = ({
 }) => {
   return (
     <section className="pt-[55px] bg-cover bg-center" style={{ backgroundImage: `url(${bgImage})` }}>
-      <div className="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center gap-10 pt-[120px] justify-around">
+      <div className="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center gap-10 pt-[120px] justify-between">
         
         {/* Text Section */}
         <div className="w-full h-[100%] lg:w-1/2 text-center lg:text-left">

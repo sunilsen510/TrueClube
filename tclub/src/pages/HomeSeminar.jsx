@@ -8,7 +8,7 @@ const HomeSeminar = () => {
     <>
         <HeroBanner />
       <section>
-        <div className="container mx-auto flex flex-col md:flex-row items-start relative h-full">
+        <div className="container mx-auto flex flex-col md:flex-row items-start relative h-full gap-[30px]">
           {/* Left: UpcomingSeminar */}
           <div className="w-full md:w-1/2 px-4 h-[100%]">
             <UpcomingSeminar />

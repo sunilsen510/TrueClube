@@ -2,39 +2,145 @@
   {
     "id": 1,
     "title": "Trueyou.Club Realise Your Potential",
+    "title1": "Heath Club Realise Your Potential",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout It is a long established fact that a reader.",
     "location": "Gotham Hall, 1356 Broadway, USA",
     "date": "10 February 2024 09:00AM EST",
-    "image": "./src/assets/blogImg.svg"
+    "date2": "02 - Feb - 2024",
+    "image": "./src/assets/blogImg.svg",
+    "image1": "./src/assets/img1.svg",
+    "image11": "./src/assets/img11.svg"
   },
   {
     "id": 2,
     "title": "Blog Club Realise Your Potential",
+    "title1": "Heath Club Realise Your Potential",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout It is a long established fact that a reader.",
     "location": "Gotham Hall, 1356 Broadway, USA",
     "date": "10 February 2024 09:00AM EST",
-    "image": "./src/assets/blogImg.svg"
+    "date2": "02 - Feb - 2024",
+    "image": "./src/assets/blogImgone.svg",
+    "image1": "./src/assets/img2.svg",
+    "image11": "./src/assets/img12.svg"
   },
   {
     "id": 3,
     "title": "Blog Club Realise Your Potential",
+    "title1": "Heath Club Realise Your Potential",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout It is a long established fact that a reader.",
     "location": "Gotham Hall, 1356 Broadway, USA",
     "date": "10 February 2024 09:00AM EST",
-     "image": "./src/assets/blogImg.svg"
+    "date2": "02 - Feb - 2024",
+    "image": "./src/assets/blogImgtwo.svg",
+    "image1": "./src/assets/img3.svg",
+    "image11": "./src/assets/img13.svg"
   },
   {
     "id": 4,
     "title": "Trueyou.Club Realise Your Potential",
+    "title1": "Heath Club Realise Your Potential",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout It is a long established fact that a reader.",
     "location": "Gotham Hall, 1356 Broadway, USA",
     "date": "10 February 2024 09:00AM EST",
-     "image": "./src/assets/blogImg.svg"
+    "date2": "02 - Feb - 2024",
+    "image": "./src/assets/blogImg.svg",
+    "image1": "./src/assets/img4.svg",
+    "image11": "./src/assets/img14.svg"
   },
   {
     "id": 5,
     "title": "Blog Club Realise Your Potential",
-    "date": "02 - Feb - 2024"
+    "title1": "Heath Club Realise Your Potential",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout It is a long established fact that a reader.",
+    "location": "Gotham Hall, 1356 Broadway, USA",
+    "date": "10 February 2024 09:00AM EST",
+    "date2": "02 - Feb - 2024",
+    "image": "./src/assets/blogImg.svg",
+    "image1": "./src/assets/img5.svg",
+    "image11": "./src/assets/img15.svg"
   },
   {
     "id": 6,
     "title": "Blog Club Realise Your Potential",
-    "date": "02 - Feb - 2024"
+    "title1": "Heath Club Realise Your Potential",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout It is a long established fact that a reader.",
+    "location": "Gotham Hall, 1356 Broadway, USA",
+    "date": "10 February 2024 09:00AM EST",
+    "date2": "02 - Feb - 2024",
+    "image": "./src/assets/blogImg.svg",
+    "image1": "./src/assets/img6.svg",
+    "image11": "./src/assets/img16.svg"
+  },
+  {
+    "id": 7,
+    "title": "Trueyou.Club Realise Your Potential",
+    "title1": "Heath Club Realise Your Potential",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout It is a long established fact that a reader.",
+    "location": "Gotham Hall, 1356 Broadway, USA",
+    "date": "10 February 2024 09:00AM EST",
+    "date2": "02 - Feb - 2024",
+    "image": "./src/assets/blogImg.svg",
+    "image1": "./src/assets/img7.svg",
+    "image11": "./src/assets/img17.svg"
+  },
+  {
+    "id": 8,
+    "title": "Blog Club Realise Your Potential",
+    "title1": "Heath Club Realise Your Potential",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout It is a long established fact that a reader.",
+    "location": "Gotham Hall, 1356 Broadway, USA",
+    "date": "10 February 2024 09:00AM EST",
+    "date2": "02 - Feb - 2024",
+    "image": "./src/assets/blogImg.svg",
+    "image1": "./src/assets/img8.svg",
+    "image11": "./src/assets/img18.svg"
+  },
+  {
+    "id": 9,
+    "title": "Blog Club Realise Your Potential",
+    "title1": "Heath Club Realise Your Potential",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout It is a long established fact that a reader.",
+    "location": "Gotham Hall, 1356 Broadway, USA",
+    "date": "10 February 2024 09:00AM EST",
+    "date2": "02 - Feb - 2024",
+    "image": "./src/assets/blogImg.svg",
+    "image1": "./src/assets/img9.svg",
+    "image11": "./src/assets/img19.svg"
+  },
+  {
+    "id": 10,
+    "title": "Trueyou.Club Realise Your Potential",
+    "title1": "Heath Club Realise Your Potential",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout It is a long established fact that a reader.",
+    "location": "Gotham Hall, 1356 Broadway, USA",
+    "date": "10 February 2024 09:00AM EST",
+    "date2": "02 - Feb - 2024",
+    "image": "./src/assets/blogImg.svg",
+    "image1": "./src/assets/img1.svg",
+    "image11": "./src/assets/img11.svg"
+  },
+  {
+    "id": 11,
+    "title": "Blog Club Realise Your Potential",
+    "title1": "Heath Club Realise Your Potential",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout It is a long established fact that a reader.",
+    "location": "Gotham Hall, 1356 Broadway, USA",
+    "date": "10 February 2024 09:00AM EST",
+    "date2": "02 - Feb - 2024",
+    "image": "./src/assets/blogImg.svg",
+    "image1": "./src/assets/img2.svg",
+    "image11": "./src/assets/img12.svg"
+  },
+  {
+    "id": 12,
+    "title": "Blog Club Realise Your Potential",
+    "title1": "Heath Club Realise Your Potential",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout It is a long established fact that a reader.",
+    "location": "Gotham Hall, 1356 Broadway, USA",
+    "date": "10 February 2024 09:00AM EST",
+    "date2": "02 - Feb - 2024",
+    "image": "./src/assets/blogImg.svg",
+    "image1": "./src/assets/img3.svg",
+    "image11": "./src/assets/img13.svg"
   }
 ]
