@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import mainLogo from '../assets/logo.svg';
-import CustomButton from "../components/customButton";
+import CustomButton from "./CustomButton";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -12,26 +12,13 @@ const navLinks = [
   { label: "Contact Us", path: "/contact us"}
 ];
 
-const authButtons = [
-  {
-    label: "Login",
-    path: "/login",
-    style: "border border-blue-600 text-[#006AF2] hover:bg-[#e6f0ff] shadow-primary",
-  },
-  {
-    label: "Sign Up",
-    path: "/signup",
-    style: "bg-blue-600 text-white hover:bg-blue-700",
-  },
-];
-
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <header className="bg-[#FFFFFF] shadow-md fixed top-0 left-0 w-full z-50">
-      <div className="container-fluid mx-auto relative flex items-center justify-between py-4 px-4 bg-white border-black">
+    <header className="bg-[#FFFFFF] fixed top-0 left-0 w-full z-50">
+      <div className="container-fluid mx-auto relative flex items-center justify-between py-4 px-[50px] bg-white border-black">
 
         {/* Logo - Left */}
         <div className="text-xl font-bold text-blue-600">
@@ -54,9 +41,9 @@ const Header = () => {
         </nav>
 
         {/* Auth Buttons - Right */}
-        <div className="hidden md:flex items-center space-x-3 ml-auto">
-            <CustomButton label="Login" to="/login" variant="outline" />
-            <CustomButton label="Sign Up" to="/signup" variant="primary" />
+        <div className="hidden md:flex items-center space-x-3 ml-auto gap-2">
+          <CustomButton label="Login" to="/login" variant="outline"  className="shadow-[8px_6px_15px_0px_#0061DE40]" />
+          <CustomButton label="Sign Up" to="/signup" variant="primary" />
         </div>
 
         {/* Mobile Menu Toggle */}

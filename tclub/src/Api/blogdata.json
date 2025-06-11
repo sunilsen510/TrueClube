@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "title": "Trueyou.Club Realise Your Potential",
+    "location": "Gotham Hall, 1356 Broadway, USA",
+    "date": "10 February 2024 09:00AM EST",
+    "image": "./src/assets/blogImg.svg"
+  },
+  {
+    "id": 2,
+    "title": "Blog Club Realise Your Potential",
+    "location": "Gotham Hall, 1356 Broadway, USA",
+    "date": "10 February 2024 09:00AM EST",
+    "image": "./src/assets/blogImg.svg"
+  },
+  {
+    "id": 3,
+    "title": "Blog Club Realise Your Potential",
+    "location": "Gotham Hall, 1356 Broadway, USA",
+    "date": "10 February 2024 09:00AM EST",
+     "image": "./src/assets/blogImg.svg"
+  },
+  {
+    "id": 4,
+    "title": "Trueyou.Club Realise Your Potential",
+    "location": "Gotham Hall, 1356 Broadway, USA",
+    "date": "10 February 2024 09:00AM EST",
+     "image": "./src/assets/blogImg.svg"
+  },
+  {
+    "id": 5,
+    "title": "Blog Club Realise Your Potential",
+    "date": "02 - Feb - 2024"
+  },
+  {
+    "id": 6,
+    "title": "Blog Club Realise Your Potential",
+    "date": "02 - Feb - 2024"
+  }
+]

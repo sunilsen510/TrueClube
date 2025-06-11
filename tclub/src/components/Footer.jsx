@@ -3,7 +3,7 @@ import SocialIcons from '../components/SocialIcons';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#F9FAFC] pt-[120px]">
+    <footer className="bg-[#F9FAFC] pt-[20px]">
       <div className="max-w-screen-9xl mx-auto  sm:px-0 lg:px-0 flex flex-col sm:flex-row items-center justify-center gap-4 py-[20px] border-b border-white">
         
         {/* Copyright */}
