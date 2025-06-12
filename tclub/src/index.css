@@ -55,3 +55,19 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+
+.before-bg {
+  position: relative;
+}
+
+.before-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url('./assets/herobg.svg');
+  background-size: cover;
+  background-position: center;
+  height: calc(100% + 300px); 
+}

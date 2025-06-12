@@ -1,137 +1,95 @@
 import React from 'react'
 import CustomButton from '../components/CustomButton';
 import emailImg from '../assets/email.svg';
-import eyeImg from '../assets/eye.svg';
-import lockImg from '../assets/lock.svg';
+import userImg from '../assets/user.svg';
+import callImg from '../assets/call.svg';
 
 
-// const Contact = () => {
-//   return (
-//     <>
-//     <h2 className="text-xl font-bold text-gray-800 mb-2 text-center">Get In Touch</h2>
-//         <div className="w-full md:w-full">
-//                 <form className="space-y-6 w-full">
-//                     <div className="mb-[30px] relative">
-//                         <label className="block text-sm font-medium text-gray-700 bg-[#ffff] mb-1 absolute px-[6px] top-[-10px] left-[20px] z-50">Email</label>
-//                         <div className="relative">
-//                             <img
-//                             src={emailImg}
-//                             alt="email icon"
-//                             className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
-//                             />
-//                             <input
-//                             type="email"
-//                             placeholder="Enter your email"
-//                             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none"
-//                             />
-//                         </div>
-//                     </div>
-
-//                     <div className="mb-[30px] relative">
-//                         <label className="block text-sm font-medium text-gray-700 mb-1 bg-[#ffff] absolute top-[-10px] px-[6px] left-[20px] z-50">Password</label>
-//                         <div className="relative">
-//                             <img
-//                             src={lockImg}
-//                             alt="password icon"
-//                             className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
-//                             />
-//                             <img
-//                             src={eyeImg}
-//                             alt="toggle visibility"
-//                             className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 cursor-pointer"
-//                             />
-//                             <input
-//                             type="password"
-//                             placeholder="Enter your password"
-//                             className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md  focus:outline-none"
-//                             />
-//                         </div>
-//                     </div>
-
-//                     <div className='mt-[40px]'>
-//                         <CustomButton
-//                         label="Submit"
-//                         to="/login"
-//                         variant="outline"
-//                         className="px-6 w-full"
-//                         />
-//                     </div>
-                    
-//                 </form>
-//             </div>
-//     </>
-//   )
-// }
 
 const Contact = () => {
   return (
     <>
-      <h2 className="text-xl font-bold text-gray-800 mb-6 text-center">Get In Touch</h2>
-
-      <div className="w-full md:w-full">
+      <div className='w-full h-full'>
+        <h2 className="text-4xl  font-bold text-gray-800 text-start">Get In Touch</h2>
         <form className="space-y-6 w-full">
-          {/* First Name */}
-          <div className="mb-[30px] relative">
-            <label className="block text-sm font-medium text-gray-700 bg-white absolute top-[-10px] left-[20px] px-1 z-10">
-              First Name
-            </label>
-            <input
-              type="text"
-              placeholder="Enter your first name"
-              className="w-full pl-4 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none"
-            />
-          </div>
+          
+          {/* First Name + Last Name + Phone + Email in 2-2 Columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-[30px] mb-0 mt-[50px]">
+            {/* First Name */}
+            <div className="relative">
+              <label className="block text-sm font-medium text-gray-700 bg-white absolute top-[-10px] left-[20px] px-1 z-10">
+                First Name
+              </label>
+              <div className="relative">
+                <img src={userImg} alt="user icon" className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4" />
+                <input
+                  type="text"
+                  placeholder="Enter Your First Name"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+                />
+              </div>
+            </div>
 
-          {/* Last Name */}
-          <div className="mb-[30px] relative">
-            <label className="block text-sm font-medium text-gray-700 bg-white absolute top-[-10px] left-[20px] px-1 z-10">
-              Last Name
-            </label>
-            <input
-              type="text"
-              placeholder="Enter your last name"
-              className="w-full pl-4 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none"
-            />
-          </div>
+            {/* Last Name */}
+            <div className="relative">
+              <label className="block text-sm font-medium text-gray-700 bg-white absolute top-[-10px] left-[20px] px-1 z-10">
+                Last Name
+              </label>
+              <div className="relative">
+                <img src={userImg} alt="user icon" className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4" />
+                <input
+                  type="text"
+                  placeholder="Enter Your Last Name"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+                />
+              </div>
+            </div>
 
-          {/* Phone Number */}
-          <div className="mb-[30px] relative">
-            <label className="block text-sm font-medium text-gray-700 bg-white absolute top-[-10px] left-[20px] px-1 z-10">
-              Phone Number
-            </label>
-            <input
-              type="tel"
-              placeholder="Enter your phone number"
-              className="w-full pl-4 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none"
-            />
-          </div>
+            {/* Phone Number */}
+            <div className="relative">
+              <label className="block text-sm font-medium text-gray-700 bg-white absolute top-[-10px] left-[20px] px-1 z-10">
+                Phone Number
+              </label>
+              <div className="relative">
+                <img src={callImg} alt="call icon" className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4" />
+                <input
+                  type="text"
+                  placeholder="Enter Your Phone Number"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+                />
+              </div>
+            </div>
 
-          {/* Email */}
-          <div className="mb-[30px] relative">
-            <label className="block text-sm font-medium text-gray-700 bg-white absolute top-[-10px] left-[20px] px-1 z-10">
-              Email
-            </label>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full pl-4 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none"
-            />
+            {/* Email */}
+            <div className="relative">
+              <label className="block text-sm font-medium text-gray-700 bg-white absolute top-[-10px] left-[20px] px-1 z-10">
+                Email
+              </label>
+              <div className="relative">
+                <img src={emailImg} alt="email icon" className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4" />
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Message */}
-          <div className="mb-[30px] relative">
+          <div className="relative mt-[30px]">
             <label className="block text-sm font-medium text-gray-700 bg-white absolute top-[-10px] left-[20px] px-1 z-10">
               Message
             </label>
             <textarea
-              placeholder="Write your message..."
+              placeholder="Enter Your Message"
               rows="5"
               className="w-full pl-4 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none resize-none"
             />
           </div>
 
           {/* Submit Button */}
-          <div className="mt-[40px]">
+          <div className="w-[227px]">
             <CustomButton
               label="Submit"
               to="#"

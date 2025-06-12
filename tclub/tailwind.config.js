@@ -8,7 +8,7 @@ module.exports = {
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
       },
-
+      
       // Custom Max Width
       maxWidth: {
         '9xl': '1600px',

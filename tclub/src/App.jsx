@@ -10,6 +10,9 @@ import SeminarPageTwo from './pages/SeminarPageTwo';
 import BlogPage from './pages/BlogPage';
 import HealthPage from './pages/HealthPage';
 import ContactPage from './pages/ContactPage';
+import ErrorPage from './pages/ErrorPage';
+import BlogDeatailsPage from './pages/BlogDeatailsPage';
+import HeroesPage from './pages/HeroesPage';
 
 function App() {
 
@@ -23,9 +26,12 @@ function App() {
         <Route path='/health' element={<HomeSeminar />} />
         <Route path='/seminar' element={<SeminarPage />} />
         <Route path='/seminarpage' element={<SeminarPageTwo />} />
+        <Route path='/heroes' element={<HeroesPage />} />
         <Route path='/blogs' element={<BlogPage />} />
+        <Route path='/details' element={<BlogDeatailsPage />} />
         <Route path='/healths' element={<HealthPage />} />
         <Route path='/contact' element={<ContactPage />} />
+        <Route path='/error' element={<ErrorPage/>} />
       </Routes>
       <Footer />
     </BrowserRouter>

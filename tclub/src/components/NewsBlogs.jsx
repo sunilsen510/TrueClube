@@ -54,21 +54,23 @@ const NewsBlogs = () => {
                   </>
                 ) : (
                   <>
-                    <div className="flex items-center gap-2 text-sm text-gray-600 mb-[15px]">
-                      <img
-                        src={userImg}
-                        alt="user"
-                        className="w-[18px] h-[18px]"
-                      />
-                      <span className="text-black font-semibold">Admin</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <img
-                        src={calenderImg}
-                        alt="calendar"
-                        className="w-[18px] h-[18px]"
-                      />
-                      <span className="font-semibold text-black">{blog.date}</span>
+                    <div className='flex items-center gap-2 justify-center'>
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <img
+                          src={userImg}
+                          alt="user"
+                          className="w-[18px] h-[18px]"
+                        />
+                        <span className="text-black font-semibold">Admin</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <img
+                          src={calenderImg}
+                          alt="calendar"
+                          className="w-[18px] h-[18px]"
+                        />
+                        <span className="font-semibold text-black">{blog.date}</span>
+                      </div>
                     </div>
                   </>
                 )}

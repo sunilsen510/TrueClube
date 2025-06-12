@@ -6,23 +6,15 @@ import BlogCard from '../components/BlogCard';
 import locationImg from '../assets/location.svg';
 import calendarImg from '../assets/calendar.svg';
 import userImg from '../assets/user.svg';
+import usePagination from '../hooks/usePagination';
 
 
 const HealthPage = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 5;
-  const totalPages = Math.ceil(blogData.length / postsPerPage);
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = blogData.slice(indexOfFirstPost, indexOfLastPost);
+ const { currentPage, totalPages, currentItems, handlePageChange } = usePagination(blogData, 5);
 
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
   return (
     <>
-      <Banner title="Health " />
+      <Banner title="HEALTH" />
        <div className="container mx-auto max-w-9xl px-4 pt-[100px] pb-[60px]">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
           {blogData.slice(0, 9).map((blog) => (

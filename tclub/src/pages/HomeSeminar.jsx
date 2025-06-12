@@ -6,7 +6,7 @@ import UpcomingSeminar from '../components/UpcomingSeminar';
 const HomeSeminar = () => {
   return (
     <>
-        <HeroBanner />
+      <HeroBanner />
       <section>
         <div className="container mx-auto flex flex-col md:flex-row items-start relative h-full gap-[30px]">
           {/* Left: UpcomingSeminar */}

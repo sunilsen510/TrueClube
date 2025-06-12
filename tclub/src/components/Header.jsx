@@ -10,7 +10,8 @@ import CustomButton from "./CustomButton";
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "Health", path: "/health" },
-  { label: "Seminar", path: "/seminar" }, 
+  { label: "Seminar", path: "/seminar" },
+  { label: "Heroes", path: "/heroes" }, 
   { label: "News", path: "/blogs" },
   { label: "Contact Us", path: "/contact"}
 ];
@@ -43,7 +44,7 @@ const Header = () => {
             <NavLink
               key={path}
               to={path}
-              className="text-gray-700 hover:text-blue-600 transition"
+              className="text-gray-700 hover:!text-blue-600 transition"
             >
               {label}
             </NavLink>

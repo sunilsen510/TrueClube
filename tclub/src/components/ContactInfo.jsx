@@ -1,0 +1,56 @@
+import React from 'react';
+import locationIcon from '../assets/map.svg';
+import phoneIcon from '../assets/phone.svg';
+import emailIcon from '../assets/email.svg';
+
+const contactDetails = [
+  {
+    id: 1,
+    icon: phoneIcon,
+    title: 'Phone',
+    value: '+91-1234567890',
+  },
+   {
+    id: 2,
+    icon: emailIcon,
+    title: 'Email',
+    value: 'Company@mail.com',
+  },
+  {
+    id: 3,
+    icon: locationIcon,
+    title: 'Location',
+    value: '132, My Street,Kingston, New York 12401 United States',
+  },
+  
+ 
+];
+
+const ContactInfo = () => {
+  return (
+    <div className="p-[30px] bg-[#F9FEF5] rounded-lg shadow-md">
+      <div className="mb-6">
+        <h3 className="text-2xl font-semibold mb-2 text-gray-800">Contact Info</h3>
+        <p className="text-gray-600 w-[566px]">
+          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+        </p>
+      </div>
+
+      <ul className="space-y-6">
+        {contactDetails.map((item) => (
+          <li key={item.id} className="flex items-start gap-4">
+            <div className='w-[72px] h-[72px] flex items-center justify-center bg-[#CFE8C8] rounded-xl'>
+                <img src={item.icon} alt={`${item.title} icon`} className="w-6 h-6" />
+            </div>
+            <div>
+              <p className="text-md font-semibold text-gray-700">{item.title}</p>
+              <span className="text-gray-600">{item.value}</span>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ContactInfo;
