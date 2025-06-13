@@ -14,14 +14,14 @@ const HeroBanner = ({
 }) => {
   return (
     <section className="pt-[55px] bg-cover bg-center" style={{ backgroundImage: `url(${bgImage})` }}>
-      <div className="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center gap-10 pt-[120px] justify-between">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 md:gap-10 pt-20">
         
         {/* Text Section */}
         <div className="w-full h-[100%] lg:w-1/2 text-center lg:text-left">
-          <h1 className="text-4xl sm:text-5xl font-bold text-[#0A2540] mb-6">
+          <h1 className="text-3xl sm:text-[30px] md:text-4xl xl:text-6xl font-bold text-[#0A2540] mb-4 sm:mb-6">
             {title}
           </h1>
-          <p className="text-lg text-gray-600 mb-8 w-[460px]">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-4 sm:mb-6 md:mb-8 lg:w-[460px] sm:max-w-full md:max-w-full">
             {subtitle}
           </p>
           
@@ -43,8 +43,8 @@ const HeroBanner = ({
         </div>
 
         {/* Image Section */}
-        <div className="w-[450px] h-[100%] flex items-center justify-center">
-          <div className="w-[416px] h-[100%]  rounded-t-full border-t-21 border-l-17 border-r-17 border-[#E4F3DD] overflow-hidden">
+        <div className="w-full max-w-[450px] h-full flex items-center justify-center mx-auto">
+          <div className="w-full max-w-[416px] h-full rounded-t-full border-t-[21px] border-l-[17px] border-r-[17px] border-[#E4F3DD] overflow-hidden">
             <img
               src={image}
               alt="Hero"

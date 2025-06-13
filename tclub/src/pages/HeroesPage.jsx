@@ -1,66 +1,66 @@
-import React, {useState} from 'react'
+import React from 'react';
 import Banner from '../components/Banner';
 import heroesImage from '../assets/heroesImage.svg';
 import Pagination from '../components/Pagination';
-import blogData from '../Api/blogdata.json'
-// import BlogCard from '../components/BlogCard';
-// import locationImg from '../assets/location.svg';
-// import calendarImg from '../assets/calendar.svg';
-import userImg from '../assets/user.svg';
+import cardData from '../Api/blogDataOne.json';
+import crownImg from '../assets/crown.svg';
 import usePagination from '../hooks/usePagination';
 
-
-const cardData = [
-  { id: 1, name: 'Cameron Williamson', description: 'This is a dummy paragraph about user 1.' },
-  { id: 2, name: 'Cameron Williamson', description: 'This is a dummy paragraph about user 2.' },
-  { id: 3, name: 'Cameron Williamson', description: 'This is a dummy paragraph about user 3.' },
-  { id: 4, name: 'Cameron Williamson', description: 'This is a dummy paragraph about user 4.' },
-  { id: 5, name: 'Cameron Williamson', description: 'This is a dummy paragraph about user 5.' },
-  { id: 6, name: 'Cameron Williamson', description: 'This is a dummy paragraph about user 6.' },
-  { id: 7, name: 'Cameron Williamson', description: 'This is a dummy paragraph about user 7.' },
-  { id: 8, name: 'Cameron Williamson', description: 'This is a dummy paragraph about user 8.' }
-];
-
-
 const HeroesPage = () => {
-    const { currentPage, totalPages, currentItems, handlePageChange } = usePagination(blogData, 5);
+  const { currentPage, totalPages, currentItems, cardImg, handlePageChange } = usePagination(cardData, 8); 
 
-  
-    
   return (
     <>
-      <Banner title='OUR HEROES' image={heroesImage} />
+      <Banner title="OUR HEROES" image={heroesImage} />
+  
+      <div className="flex items-center justify-center w-full">
+        <span className="bg-[#E5F5E5] font-bold text-black py-[10px] px-[20px] w-[230px] text-center rounded-b-2xl">
+          Stories Of The Heroes
+        </span>
+      </div>
 
+      {/* Hero Cards */}  
       <div className="container mx-auto max-w-9xl px-4 pt-[100px] pb-[60px]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 p-4">
-          {cardData.map((card) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 p-4">
+          {currentItems.map((card) => (
             <div
               key={card.id}
-              className="flex flex-col items-center text-center bg-white rounded-xl p-4 shadow hover:shadow-lg transition"
+              className=" bg-white p-4 rounded-4xl border border-[#DDDDE9] cursor-pointer"
             >
               {/* Rounded Image */}
-              <div className="w-20 h-20 rounded-full overflow-hidden mb-3">
-                <img
-                  src={`https://i.pravatar.cc/150?img=${card.id}`} // dynamic image based on ID
-                  alt={`User ${card.id}`}
-                  className="w-full h-full object-cover"
-                />
+              <div className='flex items-center gap-[20px]'>
+                <div className="w-20 h-20 rounded-full overflow-hidden">
+                  <img src={card.image} alt={card.name} className='w-full h-full object-contain' />
+                </div>
+                <div className="font-semibold text-gray-800 flex flex-col items-baseline gap-2">
+                  <div className="text-base">{card.name}</div>
+                  <div className="flex items-center justify-center gap-2 bg-black text-white text-xs font-bold px-3 py-1 rounded-2xl">
+                    <img src={crownImg} alt="Crown" className="w-4 h-4 object-contain" />
+                    <span>VIP</span>
+                  </div>
+                </div>
               </div>
-
-              {/* Content + VIP Badge */}
-              <div className="font-semibold text-gray-800">
-                {card.name}
-                <span className="ml-2 inline-block bg-yellow-400 text-white text-xs font-bold px-2 py-0.5 rounded-full">
-                  VIP 👑
+              <div className="flex items-center w-full my-[30px] relative before:content-[''] before:absolute before:left-0 before:right-0 before:top-1/2 before:h-[1px] before:bg-[#DDDDE9]">
+                <span className="bg-[#E5F5E5] font-bold text-black py-[6px] px-[10px] w-[230px] text-center z-10">
+                  Stories Of The Heroes
                 </span>
               </div>
-
-              {/* Paragraph */}
-              <p className="text-sm text-gray-600 mt-2">{card.description}</p>
+              {/* Description */}
+                <p className="text-md text-[#40658B]">
+                  {card.description.includes('Read More.') ? (
+                    <>
+                      {card.description.replace('...Read More.', '')}
+                      <span className="text-blue-600 font-medium">...Read More.</span>
+                    </>
+                  ) : (
+                    card.description
+                  )}
+                </p>
             </div>
           ))}
         </div>
 
+        {/* Pagination */}
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
@@ -68,76 +68,7 @@ const HeroesPage = () => {
         />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default HeroesPage
-
-
-
-
-// import React from 'react';
-// import Banner from '../components/Banner';
-// import heroesImage from '../assets/heroesImage.svg';
-// import Pagination from '../components/Pagination';
-// import hero1 from '../assets/hero1.jpg';
-// import hero2 from '../assets/hero2.jpg';
-
-// const cardData = [
-//   { id: 1, name: 'Cameron Williamson', image: hero1, description: 'This is a dummy paragraph about user 1.' },
-//   { id: 2, name: 'Cameron Williamson', image: hero2, description: 'This is a dummy paragraph about user 2.' },
-//   { id: 3, name: 'Cameron Williamson', image: hero1, description: 'This is a dummy paragraph about user 3.' },
-//   { id: 4, name: 'Cameron Williamson', image: hero2, description: 'This is a dummy paragraph about user 4.' },
-//   { id: 5, name: 'Cameron Williamson', image: hero1, description: 'This is a dummy paragraph about user 5.' },
-//   { id: 6, name: 'Cameron Williamson', image: hero2, description: 'This is a dummy paragraph about user 6.' },
-//   { id: 7, name: 'Cameron Williamson', image: hero1, description: 'This is a dummy paragraph about user 7.' },
-//   { id: 8, name: 'Cameron Williamson', image: hero2, description: 'This is a dummy paragraph about user 8.' },
-// ];
-
-// const HeroesPage = () => {
-//   return (
-//     <>
-//       <Banner title="OUR HEROES" image={heroesImage} />
-
-//       <div className="container mx-auto max-w-7xl px-4 pt-[100px] pb-[60px]">
-//         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 p-4">
-//           {cardData.map((card) => (
-//             <div
-//               key={card.id}
-//               className="flex flex-col items-center text-center bg-white rounded-xl p-4 shadow hover:shadow-lg transition"
-//             >
-//               {/* Rounded Image */}
-//               <div className="w-20 h-20 rounded-full overflow-hidden mb-3">
-//                 <img
-//                   src={card.image}
-//                   alt={card.name}
-//                   className="w-full h-full object-cover"
-//                 />
-//               </div>
-
-//               {/* Content + VIP Badge */}
-//               <div className="font-semibold text-gray-800">
-//                 {card.name}
-//                 <span className="ml-2 inline-block bg-yellow-400 text-white text-xs font-bold px-2 py-0.5 rounded-full">
-//                   VIP 👑
-//                 </span>
-//               </div>
-
-//               {/* Paragraph */}
-//               <p className="text-sm text-gray-600 mt-2">{card.description}</p>
-//             </div>
-//           ))}
-//         </div>
-
-//         {/* Uncomment below only if you use pagination */}
-//         {/* <Pagination
-//           currentPage={1}
-//           totalPages={1}
-//           onPageChange={() => {}}
-//         /> */}
-//       </div>
-//     </>
-//   );
-// };
-
-// export default HeroesPage;
+export default HeroesPage;

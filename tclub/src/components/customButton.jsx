@@ -11,7 +11,7 @@ const CustomButton = ({
   type = "button",
 }) => {
   const baseStyles =
-    "px-[45px] py-[15px] rounded-3xl text-sm font-medium transition duration-200 text-center inline-flex items-center justify-center gap-2";
+    "px-[45px] py-[15px] rounded-3xl text-sm font-medium transition duration-200 text-center inline-flex items-center justify-center gap-4 mr-0";
 
   const variants = {
     primary: "text-primary-text hover:bg-primary-hover border-0 bg-[#F5F7F9]",

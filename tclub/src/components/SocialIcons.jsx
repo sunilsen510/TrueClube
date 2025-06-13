@@ -1,5 +1,5 @@
 import React from 'react';
-import Facebook from '../assets/facebook.svg';
+import Facebook from '../assets/fb.svg';
 import Twitter from '../assets/twitter.svg';
 import Instagram from '../assets/instagram.svg';
 import Youtube from '../assets/youtube.svg';

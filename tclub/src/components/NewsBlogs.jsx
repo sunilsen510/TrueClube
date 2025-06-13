@@ -7,7 +7,7 @@ import blogData from '../Api/blogdata.json';
 
 const NewsBlogs = () => {
   return (
-    <div className="w-full max-w-5xl flex flex-col justify-center items-center text-center my-[100px]">
+    <div className="w-full max-w-5xl flex flex-col justify-center items-center text-center lg:my-[100px] sm:my-0">
       <h2 className="text-xl font-bold text-gray-800 mb-2">News & Blogs</h2>
       <div className="w-20 h-1 bg-blue-600 rounded-full mb-4"></div>
       <p className="text-gray-600 mb-6 max-w-2xl">

@@ -23,7 +23,6 @@ const contactDetails = [
     value: '132, My Street,Kingston, New York 12401 United States',
   },
   
- 
 ];
 
 const ContactInfo = () => {
