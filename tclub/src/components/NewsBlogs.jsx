@@ -14,20 +14,21 @@ const NewsBlogs = () => {
         Lorem distracted by the readable content of a page when looking at.
       </p>
 
-      <div className="w-full flex flex-wrap gap-6 justify-center h-full">
+      <div className="w-full flex flex-wrap gap-6 justify-center h-full  md:mb-[40px]">
         {blogData.slice(0, 3).map((blog) => (
           <div
             key={blog.id}
-            className="border border-[#D4DEEB] p-4 rounded-xl bg-white text-left flex gap-4 w-full items-center justify-between"
+            className="border border-[#D4DEEB] p-3 sm:p-4 rounded-xl bg-white text-left flex  xl:flex-row lg:flex-col flex-col md:flex-row sm:flex-row  gap-3 sm:gap-4 w-full items-start lg:items-center sm:items-center justify-between"
+
           >
-            <div className="flex gap-4 w-full flex-1 items-center">
+            <div className="flex flex-col xxl:flex-col lg:flex-col sm:!flex-row gap-3 sm:gap-4 w-full flex-1 items-start sm:items-center  md:!flex-row md:gap-5 lg:gap-3 md:items-center">
               <img
                 src={blog.image}
                 alt="blog"
                 className="w-[156px] h-[110px] object-contain rounded-xl"
               />
               <div>
-                <h3 className="font-semibold text-lg text-gray-800 mb-[15px]">
+                <h3 className="font-semibold text-[16px] text-gray-800 mb-[15px]">
                   {blog.title}
                 </h3>
 
@@ -39,7 +40,7 @@ const NewsBlogs = () => {
                         alt="location"
                         className="w-[18px] h-[18px]"
                       />
-                      <span className="text-[#DA7821] font-semibold">
+                      <span className="text-[#DA7821] text-[12px] font-semibold">
                         {blog.location || 'Not specified'}
                       </span>
                     </div>
@@ -49,19 +50,20 @@ const NewsBlogs = () => {
                         alt="calendar"
                         className="w-[18px] h-[18px]"
                       />
-                      <span className="font-semibold text-black">{blog.date}</span>
+                      <span className="font-semibold text-[12px] text-black">{blog.date}</span>
                     </div>
                   </>
                 ) : (
                   <>
-                    <div className='flex items-center gap-2 justify-center'>
+                    <div className="flex flex-col items-center sm:flex-row sm:items-baseline md:items-baseline lg:flex-col lg:items-baseline lg:justify-start xl:flex-col 2xl:flex-row gap-2 justify-center">
+
                       <div className="flex items-center gap-2 text-sm text-gray-600">
                         <img
                           src={userImg}
                           alt="user"
                           className="w-[18px] h-[18px]"
                         />
-                        <span className="text-black font-semibold">Admin</span>
+                        <span className="text-black text-[12px] font-semibold">Admin</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-gray-600">
                         <img
@@ -69,7 +71,7 @@ const NewsBlogs = () => {
                           alt="calendar"
                           className="w-[18px] h-[18px]"
                         />
-                        <span className="font-semibold text-black">{blog.date}</span>
+                        <span className="font-semibold text-[12px] text-black">{blog.date}</span>
                       </div>
                     </div>
                   </>
@@ -83,14 +85,14 @@ const NewsBlogs = () => {
                   label="Book Seats"
                   to="/seminarpagetwo"
                   variant="outline"
-                  className="w-auto"
+                  className="w-auto lg:w-[100%] md:w-auto sm:w-[100%]"
                 />
               ) : (
                 <CustomButton
                   label="Read More"
                   to="/"
                   variant="primary"
-                  className="w-auto"
+                  className="w-auto lg:w-[100%] md:w-auto sm:w-[100%]"
                 />
               )}
             </div>

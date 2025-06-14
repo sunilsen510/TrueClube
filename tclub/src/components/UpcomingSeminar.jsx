@@ -7,7 +7,7 @@ const UpcomingSeminar = ({ showHeading = true, blogData }) => {
   const dataToShow = blogData && blogData.length > 0 ? blogData : fullBlogData.slice(0, 3);
 
   return (
-    <div className="w-full max-w-5xl flex flex-col justify-center items-center text-center my-[100px]">
+    <div className="w-full max-w-5xl flex flex-col justify-center items-center text-center my-[30px] 2xl:my-[100px] lg:my-[100px] md:my-[30px]">
       {showHeading && (
         <>
           <h2 className="text-xl font-bold text-gray-800 mb-2">Upcoming Seminars</h2>

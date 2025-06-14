@@ -20,8 +20,8 @@ const HeroesPage = () => {
       </div>
 
       {/* Hero Cards */}  
-      <div className="container mx-auto max-w-9xl px-4 pt-[100px] pb-[60px]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 p-4">
+      <div className="container mx-auto max-w-9xl lg:pt-[80px] md:pt-[60px] pt-[40px] pb-[60px] lg:container max-w-full md:max-w-9xl md:mx-0 lg:mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-6 p-4">
           {currentItems.map((card) => (
             <div
               key={card.id}

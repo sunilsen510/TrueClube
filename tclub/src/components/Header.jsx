@@ -45,13 +45,13 @@ const Header = () => {
             <img
               src={isHome ? mainLogo : userLogo}
               alt="Logo"
-              className="h-12 w-auto lg:h-16 md:h-12"
+               className={`h-12 w-auto lg:h-16 md:h-12 ${!isHome ? 'max-w-[200px]' : ''}`}
             />
           </NavLink>
         </div>
 
         {/* Center Nav Links (md and above) */}
-        <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 space-x-3 lg:space-x-4 xl:space-x-6">
+        <nav className="hidden lg:flex md:hidden absolute left-1/2 -translate-x-1/2 space-x-3 lg:space-x-4 xl:space-x-6">
           {navLinks.map(({ label, path }) => (
             <NavLink
               key={path}

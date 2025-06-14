@@ -7,7 +7,7 @@ import BlogDetails from '../components/BlogDetails';
 const BlogDeatailsPage = ({blog}) => {
   return (
     <>
-        <div className="relative pt-[96px]">
+        <div className="relative lg:pt-[96px]">
             <Banner 
                 title='Trueyou.Club Realise Your Potential'
                 subtitle="" 
@@ -17,7 +17,7 @@ const BlogDeatailsPage = ({blog}) => {
                 useBeforeBg={true}
                 metaInfo={
                     <>
-                        <div className='flex items-center gap-[30px] justify-center'>
+                        <div className="flex lg:flex-row md:flex-col sm:flex-col items-center justify-center gap-[30px] md:gap-[10px]">
                             <div className="flex items-center gap-2 text-sm text-gray-600">
                                 <div className='w-[27px] h-[27px] flex items-center justify-center bg-[#D2EFD0] rounded-full p-[6px]'>
                                     <img

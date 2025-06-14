@@ -21,7 +21,7 @@ const SeminarPage = () => {
     <>
       <Banner />
       <section className="pt-[100px] pb-[60px]">
-        <div className="container mx-auto max-w-9xl px-4">
+        <div className="container max-w-full md:max-w-9xl md:mx-0 lg:mx-auto  px-4 lg:container 4 sm:px-5 md:px-6  relative">
           <BlogComponent blogData={currentPosts} />
           <Pagination
             currentPage={currentPage}

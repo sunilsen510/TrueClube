@@ -37,7 +37,7 @@ const HeroBanner = ({
                 label={primaryButtonLabel}
                 to={primaryButtonLink}
                 variant="primary"
-                className="bg-transparent border-1 border-blue-600 text-[#006AF2] hover:bg-transparent hover:text-blue-600"
+                className="bg-transparent border-1 border-blue-600 !text-[#006AF2] hover:!text-blue-600"
                 />
           </div>
         </div>

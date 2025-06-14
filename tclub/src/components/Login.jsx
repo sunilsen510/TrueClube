@@ -67,7 +67,7 @@ export default function Login() {
           />
           <NavLink
             to=""
-            className="text-sm font-medium text-black hover:underline px-2"
+            className="text-sm font-medium text-black hover:underline px-2 "
             onClick={() => handleRoute('signup')}
           >
             Sign Up
@@ -157,7 +157,7 @@ export default function Login() {
               type="submit"
               label="Login Now !"
               variant="outline"
-              className="px-6 w-full"
+              className="px-6 w-full cursor-pointer hover:!text-black"
               disabled={!isValid || isSubmitting}
             />
           </div>

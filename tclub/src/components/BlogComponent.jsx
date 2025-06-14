@@ -10,16 +10,16 @@ const BlogComponent = ({ blogData }) => {
             {blogData.map((item, index) => (
                 <div
                 key={index}
-                className="border border-[#D4DEEB] p-4 rounded-xl bg-white text-left flex gap-4 w-full items-center justify-between"
+                className="border border-[#D4DEEB] p-3 sm:p-4 rounded-xl bg-white text-left flex  xl:flex-row lg:flex-col flex-col md:flex-row sm:flex-row  gap-3 sm:gap-4 w-full items-start lg:items-center sm:items-center justify-between"
                 >
-                    <div className="flex gap-4 w-full flex-1 items-center">
+                    <div className="flex flex-col xxl:flex-col lg:flex-col sm:!flex-row gap-3 sm:gap-4 w-full flex-1 items-start sm:items-center  md:!flex-row md:gap-5 lg:gap-3 md:items-center">
                         <img
                         src={item.image}
                         alt="blog"
                         className="w-[156px] h-[110px] object-contain rounded-xl"
                         />
-                            <div className="flex-1">
-                            <h3 className="font-semibold text-lg text-gray-800 mb-[15px]">
+                        <div>
+                            <h3 className="font-semibold text-[16px] text-gray-800 mb-[15px]">
                                 {item.title}
                             </h3>
                             <div className="mb-[15px] text-sm text-gray-600 flex items-center gap-2">
@@ -28,7 +28,7 @@ const BlogComponent = ({ blogData }) => {
                                 alt="location"
                                 className="w-[18px] h-[18px]"
                                 />
-                                <span className="text-[#DA7821] font-semibold">
+                                <span className="text-[#DA7821] text-[12px] font-semibold">
                                 {item.location || 'Not specified'}
                                 </span>
                             </div>
@@ -38,18 +38,18 @@ const BlogComponent = ({ blogData }) => {
                                 alt="calendar"
                                 className="w-[18px] h-[18px]"
                                 />
-                                <span className="font-semibold text-black">{item.date}</span>
+                                <span className="font-semibold text-[12px] text-black">{item.date}</span>
                             </div>
                             
                             </div>
-                            <div className="">
+                        </div>
+                            <div className="flex flex-col justify-center items-center flex-none md:self-stretch gap-2">
                                 {item.id === 1 ? (
-                                <CustomButton label="Book Seat" to="/" variant="outline" />
+                                <CustomButton label="Book Seat" to="/" variant="outline" className="w-auto lg:!w-[100%] md:!w-auto sm:!w-[100%]" />
                                 ) : (
-                                <CustomButton label="Read More" to="/" variant="primary" />
+                                <CustomButton label="Read More" to="/" variant="primary"  className="w-auto lg:!w-[100%] md:!w-auto sm:!w-[100%]"/>
                                 )}
                             </div>
-                    </div>
                 </div>
             ))}
         </div>

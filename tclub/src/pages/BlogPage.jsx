@@ -15,8 +15,8 @@ const BlogPage = () => {
   return (
     <>
       <Banner title="BLOGS & NEWS" />
-      <div className="container mx-auto max-w-9xl px-4 pt-[100px] pb-[60px]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
+      <div className="container mx-auto max-w-9xl px-4 pt-[60px] pb-[60px] max-w-9xl lg:pt-[80px] md:pt-[60px] lg:container max-w-full md:max-w-9xl md:mx-0 lg:mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 justify-items-center">
           {blogData.slice(0, 9).map((blog) => (
             <BlogCard
               key={blog.id}
@@ -41,3 +41,4 @@ const BlogPage = () => {
 };
 
 export default BlogPage;
+

@@ -68,7 +68,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full md:w-full px-0 sm:px-2 md:px-2">
       <h2 className="text-4xl font-bold text-gray-800 mb-6">Get In Touch</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">

@@ -25,7 +25,7 @@ const blogData = [
 
 const BlogDetails = () => {
   return (
-    <div className="container mx-auto px-4 max-w-5xl pb-[60px]">
+    <div className="container mx-auto px-4 max-w-5xl pb-[60px] sm:bg-white sm:mt-8">
       {/* Top Image */}
       <div className="flex justify-center">
         <img
