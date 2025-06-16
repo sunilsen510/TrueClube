@@ -51,47 +51,42 @@ export default function Login() {
 
   return (
     <div className="w-full flex flex-col justify-center h-full text-center md:text-left my-8 md:my-[30px] lg:my-[100px]">
-      <h2 className="text-xl font-bold text-gray-800 mb-2 text-center">Login Now</h2>
-      <div className="w-20 h-1 bg-blue-600 rounded-full mb-4 mx-auto" />
-      <p className="text-gray-600 mb-6 text-center">
-        Welcome Back! Please enter your email and password.
+      <h2 className="text-[30px] font-medium tracking-[0] text-[#0A2540] line-height text-center">Login Now</h2>
+      <div className="w-20 h-1 bg-[#006AF2] rounded-full tracking-[0]  mt-[16px]  mb-4 mx-auto" />
+      <p className="text-[#40658B] text-[16px] font-normal lg:mb-[50px] mb-[20px]   text-center">
+        Welcome Back! please enter your email and password.
       </p>
-      <div className="border border-[#D4DEEB] p-[30px] rounded-xl h-[100%] bg-[#ffff]">
-        <div className="hidden md:flex items-center space-x-2 bg-[#F5F7F9] rounded-full px-2 py-1 w-[283px] mb-[40px] mx-auto">
-          <CustomButton
-            label="Login"
-            to="/login"
-            variant="outline"
-            className="px-6"
-            onClick={() => handleRoute('login')}
-          />
-          <NavLink
-            to=""
-            className="text-sm font-medium text-black hover:underline px-2 "
-            onClick={() => handleRoute('signup')}
-          >
-            Sign Up
-          </NavLink>
+      <div className="border border-[#D4DEEB] rounded-xl h-[100%] bg-[#ffff]">
+        <div className="hidden md:flex items-center justify-center gap-5 bg-[#F5F7F9] rounded-full w-[283px] my-[40px] mx-auto">
+          <div className="hidden lg:flex items-center gap-[15px] lg:gap-[15px] xl:gap-[8px] py-[5px]">
+            <CustomButton
+              label="Login"
+              to="/login"
+              variant="outline"
+              className="shadow-[8px_6px_15px_0px_#0061DE40] ml-[5px]"
+            />
+            <CustomButton label="Sign Up" to="/signup" variant="outline" className="!px-[36px] !bg-transparent !text-[#0A2540]" />
+          </div>
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 w-full">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 w-full px-[30px]">
           {/* Email Field */}
-          <div className="mb-[30px] relative">
-            <label className="block text-sm font-medium text-gray-700 bg-[#ffff] mb-1 absolute px-[6px] top-[-10px] left-[20px] z-50">
+          <div className="mb-[30px] relative border-[#D4DEEB]">
+            <label className="block text-[14px] font-bold text-[#0A2540] bg-[#ffff] mb-1 absolute px-[2px] top-[-10px] left-[20px] z-50">
               Email
             </label>
-            <div className="relative">
+            <div className="relative rounded-[5px]">
               <img
                 src={emailImg}
                 alt="email icon"
-                className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
+                className="absolute left-[20px] top-1/2 transform -translate-y-1/2 w-4 h-4"
               />
               <input
                 {...register('email')}
                 type="email"
-                placeholder="Enter your email"
+                placeholder="Enter Your Email"
                 className={`
-                  w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none
+                  w-full pl-10 pr-0 py-[25px] text-[12px] font-light text-[#40658B] border rounded-md focus:outline-none
                   ${emailValue && errors.email ? 'border-red-500' : 'border-gray-300'}
                 `}
               />
@@ -103,27 +98,27 @@ export default function Login() {
 
           {/* Password Field */}
           <div className="mb-[30px] relative">
-            <label className="block text-sm font-medium text-gray-700 bg-[#ffff] mb-1 absolute top-[-10px] px-[6px] left-[20px] z-50">
+            <label className="block text-[14px] font-bold text-[#0A2540] bg-[#ffff] mb-1 absolute top-[-10px] px-[2px] left-[20px] z-50">
               Password
             </label>
             <div className="relative">
               <img
                 src={lockImg}
                 alt="password icon"
-                className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
+                className="absolute left-[20px] top-1/2 transform -translate-y-1/2 w-4 h-4"
               />
               <img
                 src={eyeImg}
                 alt="toggle visibility"
                 onClick={() => setShowPassword((v) => !v)}
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 cursor-pointer"
+                className="absolute right-[15px] top-1/2 transform -translate-y-1/2 w-4 h-4 cursor-pointer"
               />
               <input
                 {...register('password')}
                 type={showPassword ? 'text' : 'password'}
-                placeholder="Enter your password"
+                placeholder="Enter Your Password"
                 className={`
-                  w-full pl-10 pr-10 py-2 border rounded-md focus:outline-none
+                  w-full pl-10 pr-0 py-[25px] text-[12px] font-light text-[#40658B] border rounded-md focus:outline-none
                   ${passwordValue && errors.password ? 'border-red-500' : 'border-gray-300'}
                 `}
               />
@@ -135,17 +130,17 @@ export default function Login() {
 
           {/* Remember & Forgot */}
           <div className="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between text-sm gap-[20px] sm:gap-0 mb-[30px]">
-            <label className="flex items-center gap-3 cursor-pointer">
+            <label className="flex items-center gap-[8px] cursor-pointer">
               <div className="relative">
                 <input type="checkbox" className="sr-only peer" />
-                <div className="w-11 h-6 bg-gray-300 rounded-full peer-checked:bg-blue-600 transition-all duration-300" />
-                <div className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow-md transition-all duration-300 peer-checked:translate-x-5" />
+                <div className="w-11 h-6 !bg-[#F2F2F2] rounded-full !peer-checked:bg-blue-600 transition-all duration-300" />
+                <div className="absolute left-1 top-1 w-4 h-4 !bg-[#FFFFFF] rounded-full shadow-md transition-all duration-300 peer-checked:translate-x-5" />
               </div>
-              <span className="text-sm text-gray-700">Remember me</span>
+              <span className="text-[12px] font-normal line-heights text-[#40658B] hover:text-">Remember me</span>
             </label>
               <NavLink
                   to="/forgot-password"
-                  className="text-blue-600 text-left sm:text-right hover:underline"
+                  className=" text-[#40658B] text-[12px] line-height text-left sm:text-right hover:underline"
                 >
                   Forgot password?
               </NavLink>
@@ -157,7 +152,7 @@ export default function Login() {
               type="submit"
               label="Login Now !"
               variant="outline"
-              className="px-6 w-full cursor-pointer hover:!text-black"
+              className="px-6 !py-[23px] w-full mb-[40px] cursor-pointer hover:!text-black"
               disabled={!isValid || isSubmitting}
             />
           </div>

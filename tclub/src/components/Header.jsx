@@ -38,50 +38,52 @@ const Header = () => {
 
   return (
     <header className="bg-white fixed top-0 left-0 w-full z-50 border-b border-gray-200">
-      <div className="container-fluid mx-auto relative flex items-center justify-between py-4 px-6 lg:px-[50px] md:px-[30px]">
+      <div className="container-fluid md:px-4 lg:px-[50px] xl:px-[50px] px-4  mx-auto  relative flex items-center justify-between py-4">
         {/* Logo */}
-        <div className="text-xl font-bold text-blue-600">
+        <div className="">
           <NavLink to="/">
             <img
               src={isHome ? mainLogo : userLogo}
               alt="Logo"
-               className={`h-12 w-auto lg:h-16 md:h-12 ${!isHome ? 'max-w-[200px]' : ''}`}
+               className={`h-12 lg:w-[192px] lg:h-[60px] md:h-12 ${!isHome ? 'max-w-[200px]' : ''}`}
             />
           </NavLink>
         </div>
 
         {/* Center Nav Links (md and above) */}
-        <nav className="hidden lg:flex md:hidden absolute left-1/2 -translate-x-1/2 space-x-3 lg:space-x-4 xl:space-x-6">
-          {navLinks.map(({ label, path }) => (
-            <NavLink
-              key={path}
-              to={path}
-              className={({ isActive }) =>
-                `transition ${
-                  isActive
-                    ? "text-blue-600 font-semibold"
-                    : "text-gray-700 hover:text-blue-600"
-                }`
-              }
-            >
-              {label}
-            </NavLink>
-          ))}
+        <nav className="hidden md:hidden lg:flex justify-center">
+          <ul className="flex justify-between items-center gap-2 md:gap-[25px] lg:gap-[15px] xl:gap-[50px] 2xl:gap-[65px]">
+            {navLinks.map(({ label, path }, index) => (
+              <li key={path} className="mr-[] last:mr-0 leading-[13px]">
+                <NavLink
+                  to={path}
+                  className={({ isActive }) =>
+                    `text-lg tracking-[0] font-${isActive ? 'medium' : 'normal'} transition ${
+                      isActive ? 'text-[#006AF2]' : 'text-[#0A2540] hover:text-[#006AF2]'
+                    }`
+                  }
+                >
+                  {label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
         </nav>
+
 
         {/* Right Side */}
         {isHome ? (
-          <div className="hidden lg:flex items-center ml-auto gap-2 lg:gap-2 xl:gap-4">
+          <div className="hidden lg:flex items-center gap-[15px] lg:gap-[15px] xl:gap-[30px]">
             <CustomButton
               label="Login"
               to="/login"
               variant="outline"
               className="shadow-[8px_6px_15px_0px_#0061DE40]"
             />
-            <CustomButton label="Sign Up" to="/signup" variant="primary" />
+            <CustomButton label="Sign Up" to="/signup" variant="primary" className="!px-[36px]" />
           </div>
         ) : (
-          <div className="hidden lg:flex items-center gap-6 ml-auto">
+          <div className="hidden lg:flex items-center gap-6">
             {/* Notification Bell */}
             <div className="relative">
               <img src={bellImg} alt="Bell Icon" className="w-6 h-6" />
@@ -151,7 +153,7 @@ const Header = () => {
           ))}
 
           {/* Auth Buttons for mobile/tablet */}
-          <div className="pt-4 space-y-2 flex items-center gap-3 md:flex-row w-[300px]">
+          <div className="space-y-2 flex flex-col items-center gap-3 sm:flex-col md:flex-row md:w-[300px] w-[200px]">
             {authButtons.map(({ label, path, style }) => (
               <NavLink
                 key={path}

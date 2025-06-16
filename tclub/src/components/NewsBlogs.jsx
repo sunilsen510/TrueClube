@@ -8,9 +8,9 @@ import blogData from '../Api/blogdata.json';
 const NewsBlogs = () => {
   return (
     <div className="w-full max-w-5xl flex flex-col justify-center items-center text-center lg:my-[100px] sm:my-0">
-      <h2 className="text-xl font-bold text-gray-800 mb-2">News & Blogs</h2>
-      <div className="w-20 h-1 bg-blue-600 rounded-full mb-4"></div>
-      <p className="text-gray-600 mb-6 max-w-2xl">
+      <h2 className="text-[30px] font-medium tracking-[0] text-[#0A2540] line-height text-center">News & Blogs</h2>
+      <div className="w-20 h-1 bg-[#006AF2] rounded-full tracking-[0]  mt-[16px]  mb-4 mx-auto" />
+      <p className="text-[#40658B] text-[16px] font-normal lg:mb-[50px] mb-[20px]   text-center">
         Lorem distracted by the readable content of a page when looking at.
       </p>
 
@@ -18,60 +18,60 @@ const NewsBlogs = () => {
         {blogData.slice(0, 3).map((blog) => (
           <div
             key={blog.id}
-            className="border border-[#D4DEEB] p-3 sm:p-4 rounded-xl bg-white text-left flex  xl:flex-row lg:flex-col flex-col md:flex-row sm:flex-row  gap-3 sm:gap-4 w-full items-start lg:items-center sm:items-center justify-between"
+            className="border border-[#D4DEEB] py-[20px] pl-[15px] rounded-xl bg-white text-left flex  xl:flex-row lg:flex-col flex-col md:flex-row sm:flex-row  gap-3 sm:gap-4 w-full items-start lg:items-center sm:items-center justify-between"
 
           >
-            <div className="flex flex-col xxl:flex-col lg:flex-col sm:!flex-row gap-3 sm:gap-4 w-full flex-1 items-start sm:items-center  md:!flex-row md:gap-5 lg:gap-3 md:items-center">
+            <div className="flex flex-col xxl:flex-col lg:flex-col sm:!flex-row gap-3 sm:gap-4 w-full flex-1 items-start sm:items-center  md:!flex-row md:gap-[15px] lg:gap-[15px] md:items-center">
               <img
                 src={blog.image}
                 alt="blog"
-                className="w-[156px] h-[110px] object-contain rounded-xl"
+                className="w-full h-full sm:w-full sm:h-full md:w-[156px] md:h-[110px] object-contain rounded-xl"
               />
               <div>
-                <h3 className="font-semibold text-[16px] text-gray-800 mb-[15px]">
+                <h3 className="font-semibold text-[16px] line-height tracking-[0] text-[#0A2540] mb-[15px]">
                   {blog.title}
                 </h3>
 
                 {blog.id === 1 ? (
                   <>
-                    <div className="flex items-center gap-2 text-sm text-gray-600 mb-[15px]">
+                    <div className="flex items-center gap-[5px] text-sm text-gray-600 mb-[15px]">
                       <img
                         src={locationImg}
                         alt="location"
                         className="w-[18px] h-[18px]"
                       />
-                      <span className="text-[#DA7821] text-[12px] font-semibold">
+                      <span className="text-[#DA7821] text-[12px] font-normal">
                         {blog.location || 'Not specified'}
                       </span>
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
+                    <div className="flex items-center gap-[5px] text-sm text-gray-600">
                       <img
                         src={calenderImg}
                         alt="calendar"
                         className="w-[18px] h-[18px]"
                       />
-                      <span className="font-semibold text-[12px] text-black">{blog.date}</span>
+                      <span className="font-semibold text-[12px] text-[#0A2540]">{blog.date}</span>
                     </div>
                   </>
                 ) : (
                   <>
-                    <div className="flex flex-col items-center sm:flex-row sm:items-baseline md:items-baseline lg:flex-col lg:items-baseline lg:justify-start xl:flex-col 2xl:flex-row gap-2 justify-center">
+                    <div className="flex flex-col items-center sm:flex-row sm:items-baseline md:items-baseline lg:flex-col lg:items-baseline lg:justify-start xl:flex-col 2xl:flex-row gap-[14px] justify-center">
 
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                      <div className="flex items-center gap-[5px] text-sm text-gray-600">
                         <img
                           src={userImg}
                           alt="user"
                           className="w-[18px] h-[18px]"
                         />
-                        <span className="text-black text-[12px] font-semibold">Admin</span>
+                        <span className="text-[#0A2540] text-[12px] font-semibold">Admin</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                      <div className="flex items-center gap-[5px] text-sm text-gray-600">
                         <img
                           src={calenderImg}
                           alt="calendar"
                           className="w-[18px] h-[18px]"
                         />
-                        <span className="font-semibold text-[12px] text-black">{blog.date}</span>
+                        <span className="font-semibold text-[12px] text-[#0A2540]">{blog.date}</span>
                       </div>
                     </div>
                   </>
@@ -79,20 +79,20 @@ const NewsBlogs = () => {
               </div>
             </div>
 
-            <div className="flex flex-col justify-center items-center flex-none md:self-stretch gap-2">
+            <div className="flex flex-col justify-center items-center flex-none md:self-stretch gap-2 !pr-[20px]">
               {blog.id === 1 ? (
                 <CustomButton
                   label="Book Seats"
                   to="/seminarpagetwo"
                   variant="outline"
-                  className="w-auto lg:w-[100%] md:w-auto sm:w-[100%]"
+                  className="w-auto  !py-[20px] !px-[22px] !text-[14px] !font-semibold lg:w-[100%] md:w-auto sm:w-[100%] shadow-[8px_6px_15px_0px_#0061DE40]"
                 />
               ) : (
                 <CustomButton
                   label="Read More"
                   to="/"
                   variant="primary"
-                  className="w-auto lg:w-[100%] md:w-auto sm:w-[100%]"
+                  className="w-auto lg:w-[100%] md:w-auto sm:w-[100%] !py-[20px] !px-[22px] !text-[14px] !font-semibold"
                 />
               )}
             </div>

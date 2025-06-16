@@ -8,6 +8,12 @@ module.exports = {
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
       },
+      fontSize: {
+        nav: ['18px', 'auto'], // font-size: 18px, line-height: auto
+      },
+      letterSpacing: {
+        tightest: '0', // 0% letter spacing
+      },
       
       // Custom Max Width
       maxWidth: {
