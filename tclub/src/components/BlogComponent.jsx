@@ -3,53 +3,69 @@ import CustomButton from './CustomButton';
 import locationImg from '../assets/location.svg'; 
 import calenderImg from '../assets/calendar.svg'; 
 
-const BlogComponent = ({ blogData }) => {
+const BlogComponent = ({ blogData, extraContent = null, buttonClass = '' }) => {
   return (
     <>
         <div className="w-full flex flex-wrap gap-6 justify-center">
             {blogData.map((item, index) => (
                 <div
                 key={index}
-                className="border border-[#D4DEEB] p-3 sm:p-4 rounded-xl bg-white text-left flex  xl:flex-row lg:flex-col flex-col md:flex-row sm:flex-row  gap-3 sm:gap-4 w-full items-start lg:items-center sm:items-center justify-between"
+                className="border border-[#D4DEEB] py-[20px] pl-[15px] rounded-xl bg-white text-left flex  xl:flex-row lg:flex-col flex-col md:flex-row   gap-3 sm:gap-4 w-full items-start lg:items-center sm:items-center justify-between"
                 >
-                    <div className="flex flex-col xxl:flex-col lg:flex-col sm:!flex-row gap-3 sm:gap-4 w-full flex-1 items-start sm:items-center  md:!flex-row md:gap-5 lg:gap-3 md:items-center">
+                     <div className="flex flex-col xxl:flex-col lg:flex-col sm:!pr-[15px] pr-[15px]  gap-3 sm:gap-4 w-full flex-1 items-start sm:items-center  md:!flex-row md:gap-[15px] lg:gap-[15px] md:items-center">
                         <img
                         src={item.image}
                         alt="blog"
-                        className="w-[156px] h-[110px] object-contain rounded-xl"
+                        className="w-full h-full sm:w-full sm:h-full md:w-[156px] md:h-[110px] object-contain rounded-xl"
                         />
-                        <div>
-                            <h3 className="font-semibold text-[16px] text-gray-800 mb-[15px]">
+                        <div className='sm:mt-[15px] lg:mt-0'>
+                            <h3 className="font-semibold text-[16px] line-height tracking-[0] text-[#0A2540] mb-[15px]">
                                 {item.title}
                             </h3>
-                            <div className="mb-[15px] text-sm text-gray-600 flex items-center gap-2">
+                            <div className="flex items-center gap-[5px] text-sm text-gray-600 mb-[15px]">
                                 <img
                                 src={locationImg}
                                 alt="location"
                                 className="w-[18px] h-[18px]"
                                 />
-                                <span className="text-[#DA7821] text-[12px] font-semibold">
+                               <span className="text-[#DA7821] text-[12px] font-normal">
                                 {item.location || 'Not specified'}
                                 </span>
                             </div>
-                            <div className="text-sm text-gray-600 flex items-center gap-2">
+                            <div className="flex items-center gap-[5px] text-sm text-[#0A2540]">
                                 <img
                                 src={calenderImg}
                                 alt="calendar"
                                 className="w-[18px] h-[18px]"
                                 />
-                                <span className="font-semibold text-[12px] text-black">{item.date}</span>
+                               <span className="font-semibold text-[12px] text-[#0A2540]">{item.date}</span>
                             </div>
                             
                             </div>
                         </div>
-                            <div className="flex flex-col justify-center items-center flex-none md:self-stretch gap-2">
-                                {item.id === 1 ? (
-                                <CustomButton label="Book Seat" to="/" variant="outline" className="w-auto lg:!w-[100%] md:!w-auto sm:!w-[100%]" />
-                                ) : (
-                                <CustomButton label="Read More" to="/" variant="primary"  className="w-auto lg:!w-[100%] md:!w-auto sm:!w-[100%]"/>
+                        <div className="flex flex-col justify-center items-center flex-none md:self-stretch gap-2 !pr-[20px] md:!w-100%">
+                            {item.id === 1 ? (
+                                <>
+                                <CustomButton
+                                    label="Book Seats"
+                                    to="/seminarpagetwo"
+                                    variant="outline"
+                                    className={`w-auto !py-[20px] !px-[22px] !text-[14px] !font-semibold lg:w-[100%] md:w-auto sm:w-[100%] shadow-[8px_6px_15px_0px_#0061DE40] ${buttonClass}`}
+                                />
+                                {extraContent && (
+                                    <span className="text-[12px] text-[#DA7821] font-medium">{extraContent}</span>
                                 )}
+                                </>
+                            ) : (
+                                <CustomButton
+                                label="Read More"
+                                to="/"
+                                variant="primary"
+                                className={`w-auto lg:w-[100%] md:w-auto sm:w-[100%] !py-[20px] !px-[22px] !text-[14px] !font-semibold ${buttonClass}`}
+                                />
+                            )}
                             </div>
+
                 </div>
             ))}
         </div>

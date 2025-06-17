@@ -18,16 +18,16 @@ const NewsBlogs = () => {
         {blogData.slice(0, 3).map((blog) => (
           <div
             key={blog.id}
-            className="border border-[#D4DEEB] py-[20px] pl-[15px] rounded-xl bg-white text-left flex  xl:flex-row lg:flex-col flex-col md:flex-row sm:flex-row  gap-3 sm:gap-4 w-full items-start lg:items-center sm:items-center justify-between"
+            className="border border-[#D4DEEB] py-[20px] pl-[15px] rounded-xl bg-white text-left flex  xl:flex-row lg:flex-col flex-col md:flex-row   gap-3 sm:gap-4 w-full items-start lg:items-center sm:items-center justify-between"
 
           >
-            <div className="flex flex-col xxl:flex-col lg:flex-col sm:!flex-row gap-3 sm:gap-4 w-full flex-1 items-start sm:items-center  md:!flex-row md:gap-[15px] lg:gap-[15px] md:items-center">
+            <div className="flex flex-col xxl:flex-col lg:flex-col sm:!pr-[15px] pr-[15px]  gap-3 sm:gap-4 w-full flex-1 items-start sm:items-center  md:!flex-row md:gap-[15px] lg:gap-[15px] md:items-center">
               <img
                 src={blog.image}
                 alt="blog"
                 className="w-full h-full sm:w-full sm:h-full md:w-[156px] md:h-[110px] object-contain rounded-xl"
               />
-              <div>
+              <div className='sm:mt-[15px] lg:mt-0'>
                 <h3 className="font-semibold text-[16px] line-height tracking-[0] text-[#0A2540] mb-[15px]">
                   {blog.title}
                 </h3>
@@ -44,7 +44,7 @@ const NewsBlogs = () => {
                         {blog.location || 'Not specified'}
                       </span>
                     </div>
-                    <div className="flex items-center gap-[5px] text-sm text-gray-600">
+                    <div className="flex items-center gap-[5px] text-sm text-[#0A2540]">
                       <img
                         src={calenderImg}
                         alt="calendar"
@@ -55,9 +55,9 @@ const NewsBlogs = () => {
                   </>
                 ) : (
                   <>
-                    <div className="flex flex-col items-center sm:flex-row sm:items-baseline md:items-baseline lg:flex-col lg:items-baseline lg:justify-start xl:flex-col 2xl:flex-row gap-[14px] justify-center">
+                    <div className="flex flex-col  xl:flex-col 2xl:flex-row gap-[20px] lg:gap-[14px]">
 
-                      <div className="flex items-center gap-[5px] text-sm text-gray-600">
+                      <div className="flex items-center gap-[5px] text-sm text-[#0A2540]">
                         <img
                           src={userImg}
                           alt="user"
@@ -65,7 +65,7 @@ const NewsBlogs = () => {
                         />
                         <span className="text-[#0A2540] text-[12px] font-semibold">Admin</span>
                       </div>
-                      <div className="flex items-center gap-[5px] text-sm text-gray-600">
+                      <div className="flex items-center gap-[5px] text-sm text-[#0A2540]">
                         <img
                           src={calenderImg}
                           alt="calendar"
@@ -79,7 +79,7 @@ const NewsBlogs = () => {
               </div>
             </div>
 
-            <div className="flex flex-col justify-center items-center flex-none md:self-stretch gap-2 !pr-[20px]">
+            <div className="flex flex-col justify-center items-center flex-none md:self-stretch gap-2 !pr-[20px] md:!w-100%">
               {blog.id === 1 ? (
                 <CustomButton
                   label="Book Seats"

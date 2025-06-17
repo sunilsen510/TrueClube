@@ -18,7 +18,7 @@ const HeroBanner = ({
   className="pt-[93px] bg-cover bg-center"
   style={{ backgroundImage: `url(${bgImage})` }}
 >
-  <div className="container mx-auto px-4 flex flex-col lg:flex-row items-stretch justify-between gap-6 sm:gap-6 md:gap-6">
+  <div className="xl:container lg:container-fluid  mx-auto px-4 flex flex-col lg:flex-row items-stretch justify-between gap-6 sm:gap-6 md:gap-6">
 
     {/* Text Section */}
     <div className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left">
@@ -35,7 +35,7 @@ const HeroBanner = ({
           label={secondaryButtonLabel}
           to={secondaryButtonLink}
           variant="outline"
-          className="shadow-[8px_6px_15px_0px_#0061DE40] !px-[30px] !py-[24px] !text-[16px] leading-[13px] "
+          className="shadow-[8px_6px_15px_0px_#0061DE40] !px-[30px] !py-[24px] !text-[16px] leading-[13px]"
         />
         <CustomButton
             label={primaryButtonLabel}

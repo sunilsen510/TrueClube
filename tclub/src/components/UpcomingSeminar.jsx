@@ -10,9 +10,9 @@ const UpcomingSeminar = ({ showHeading = true, blogData }) => {
     <div className="w-full max-w-5xl flex flex-col justify-center items-center text-center my-[30px] 2xl:my-[100px] lg:my-[100px] md:my-[30px]">
       {showHeading && (
         <>
-          <h2 className="text-xl font-bold text-gray-800 mb-2">Upcoming Seminars</h2>
-          <div className="w-20 h-1 bg-blue-600 rounded-full mb-4"></div>
-          <p className="text-gray-600 mb-6 max-w-2xl">
+          <h2 className="text-[30px] font-medium tracking-[0] text-[#0A2540] line-height text-center">Upcoming Seminars</h2>
+          <div className="w-20 h-1 bg-[#006AF2] rounded-full tracking-[0]  mt-[16px]  mb-4 mx-auto" />
+          <p className="text-[#40658B] text-[16px] font-normal lg:mb-[50px] mb-[20px]   text-center">
             Lorem distracted by the readable content of a page when looking at.
           </p>
         </>

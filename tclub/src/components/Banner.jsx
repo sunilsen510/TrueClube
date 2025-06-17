@@ -11,6 +11,9 @@ const Banner = ({
   primaryButtonLabel = "Contact Us Now!",
   primaryButtonLink = "/contact",
   image = heroImage,
+  bannerImage = "",
+  width,
+  height,
   metaInfo = null 
 }) => {
   const location = useLocation();
@@ -18,19 +21,19 @@ const Banner = ({
   
   return (
     <>
-      <section className={`relative lg:min-h-[300px]  pt-[120px]  lg:pt-[120px] px-4 bg-cover bg-center text-white 
+      <section className={`relative lg:min-h-[300px] bg-cover bg-center text-white xl:pt-[93px] 
         ${isBlogPage ? 'before-bg' : 'bg-gray-100'}`} style={{ backgroundImage: `url(${bgImage})` }} >
-        <div className="container px-4 sm:px-6 lg:px-4 sm:mx-auto  md:mx-0 lg:mx-auto mx-auto max-w-9xl">
-          <div className="flex flex-col gap-5 md:flex-col lg:flex-row items-center w-full mx-auto md:px-0 sm:px-6 lg:px-4 sm:gap-[30px]">
+        <div className="xl:container lg:container-fluid  mx-auto flex flex-col lg:flex-row items-stretch justify-between gap-6 sm:gap-6 md:gap-6">
+          <div className="flex flex-col gap-5 md:flex-col lg:flex-row xl:flex-row items-end w-full mx-auto md:px-0 sm:px-6 lg:px-4 sm:gap-[30px]">
             {/* Text Content */}
             <div
                 className={`w-full ${
                   image
-                    ? 'lg:w-full md:w-full text-left px-4 sm:px-0 max-w-screen-lg mx-auto sm:!mb-[30px]'
+                    ? 'lg:w-full md:w-full text-left px-4 sm:px-0 max-w-screen-lg mx-auto lg:!mb-0 sm:!mb-[30px] py-[90px] lg:py-[90px] xl:py-[90px]'
                     : 'max-w-7xl mx-auto text-center mb-2 px-4 sm:px-6'
                 }`}
               >
-              <h2 className="text-[28px] sm:text-[35px] md:text-[40px] lg:text-[45px] font-bold leading-tight mb-4 text-black">
+              <h2 className="lg:text-[45px] text-[45px]  tracking-[0] lineh font-semibold  text-[#0A2540]  lg:mb-[30px] mb-[20px]">
                 {title}
               </h2>
 
@@ -42,7 +45,7 @@ const Banner = ({
               )}
 
               {subtitle && (
-                <p className="text-[18px] sm:text-[20px] md:text-xl text-black mb-8  w-full max-w-[570px]">{subtitle}</p>
+                <p className="text-[20px] tracking-[0] leading-[27px] line-heighted  font-normal sm:text-base md:text-lg text-[#0A2540] mb-[20px] lg:mb-[40px] lg:max-w-[470px] w-full">{subtitle}</p>
               )}
 
               {primaryButtonLabel && primaryButtonLink && (
@@ -51,25 +54,24 @@ const Banner = ({
                     label={primaryButtonLabel}
                     to={primaryButtonLink}
                     variant="outline"
-                    className="w-full sm:w-auto"
+                    className="shadow-[8px_6px_15px_0px_#0061DE40] !px-[30px] !py-[24px] !text-[16px] leading-[13px]"
                   />
                 </div>
               )}
             </div>
 
-          {/* Image */}
-          {image && (
-            <div className="w-full lg:w-full md:w-full flex justify-center md:justify-start lg:justify-end xl:justify-end md:mt-5">
-
-              <img
-                src={image}
-                alt="Hero"
-                className="w-full h-auto object-contain max-w-full sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl"
-              />
-            </div>
-          )}
-          </div>
-          
+              {/* Image */}
+              {image && (
+                <div className="w-full flex justify-center md:justify-start lg:justify-end xl:justify-end">
+                  <img
+                    src={image}
+                    alt="Hero"
+                    style={{ width: width ? `${width}px` : "100%", height: height ? `${height}px` : "auto" }}
+                    className={`object-contain max-w-[381px] max-h-[387px] ${bannerImage}`}
+                  />
+                </div>
+              )}
+              </div>
         </div>
       </section>
     </> 

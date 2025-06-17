@@ -8,7 +8,7 @@ const HomePage = () => {
     <>
       <HeroBanner />
       <section className="lg:py-0 md:py-4">
-        <div className="lg:container  max-w-7xl px-4 sm:px-5 md:px-6  mx-auto flex flex-col lg:flex-row items-start gap-10 relative md:flex-col">
+        <div className="xl:container lg:container-fluid  max-w-7xl px-4 sm:px-5 md:px-6  mx-auto flex flex-col lg:flex-row items-start gap-10 xl:gap-10 lg:gap-2 md:gap-4  relative md:flex-col">
     
           {/* Left: Login */}
           <div className="w-full lg:w-1/2 md:w-full px-4 lg:px-4 sm:px-0 md:px-0">

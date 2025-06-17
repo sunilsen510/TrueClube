@@ -58,7 +58,7 @@ export default function Login() {
       </p>
       <div className="border border-[#D4DEEB] rounded-xl h-[100%] bg-[#ffff]">
         <div className="hidden md:flex items-center justify-center gap-5 bg-[#F5F7F9] rounded-full w-[283px] my-[40px] mx-auto">
-          <div className="hidden lg:flex items-center gap-[15px] lg:gap-[15px] xl:gap-[8px] py-[5px]">
+          <div className="hidden lg:flex items-center gap-[15px] lg:gap-[0px] xl:gap-[8px] py-[5px]">
             <CustomButton
               label="Login"
               to="/login"
@@ -69,7 +69,7 @@ export default function Login() {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 w-full px-[30px]">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 w-full lg:px-[30px] !p-[30px] md:px-[30px] md:!pt-[0] sm:!pt-[30px] sm:!px-[30px]">
           {/* Email Field */}
           <div className="mb-[30px] relative border-[#D4DEEB]">
             <label className="block text-[14px] font-bold text-[#0A2540] bg-[#ffff] mb-1 absolute px-[2px] top-[-10px] left-[20px] z-50">
@@ -86,7 +86,7 @@ export default function Login() {
                 type="email"
                 placeholder="Enter Your Email"
                 className={`
-                  w-full pl-10 pr-0 py-[25px] text-[12px] font-light text-[#40658B] border rounded-md focus:outline-none
+                  w-full pl-10 pr-0 py-[20px] text-[12px] font-light text-[#40658B] border rounded-md focus:outline-none
                   ${emailValue && errors.email ? 'border-red-500' : 'border-gray-300'}
                 `}
               />
@@ -118,7 +118,7 @@ export default function Login() {
                 type={showPassword ? 'text' : 'password'}
                 placeholder="Enter Your Password"
                 className={`
-                  w-full pl-10 pr-0 py-[25px] text-[12px] font-light text-[#40658B] border rounded-md focus:outline-none
+                  w-full pl-10 pr-0 py-[20px] text-[12px] font-light text-[#40658B] border rounded-md focus:outline-none
                   ${passwordValue && errors.password ? 'border-red-500' : 'border-gray-300'}
                 `}
               />
@@ -131,11 +131,17 @@ export default function Login() {
           {/* Remember & Forgot */}
           <div className="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between text-sm gap-[20px] sm:gap-0 mb-[30px]">
             <label className="flex items-center gap-[8px] cursor-pointer">
-              <div className="relative">
-                <input type="checkbox" className="sr-only peer" />
-                <div className="w-11 h-6 !bg-[#F2F2F2] rounded-full !peer-checked:bg-blue-600 transition-all duration-300" />
-                <div className="absolute left-1 top-1 w-4 h-4 !bg-[#FFFFFF] rounded-full shadow-md transition-all duration-300 peer-checked:translate-x-5" />
-              </div>
+            <div className="relative">
+              {/* Hidden checkbox, acts as peer */}
+              <input type="checkbox" className="sr-only peer" />
+
+              {/* Track */}
+              <div className="w-11 h-6 rounded-full bg-[#F2F2F2] peer-checked:bg-[#006AF2] transition-all duration-300" />
+
+              {/* Thumb */}
+              <div className="absolute left-1 top-1 w-4 h-4 rounded-full bg-white shadow-md transition-all duration-300 peer-checked:translate-x-5" />
+            </div>
+
               <span className="text-[12px] font-normal line-heights text-[#40658B] hover:text-">Remember me</span>
             </label>
               <NavLink
@@ -152,7 +158,7 @@ export default function Login() {
               type="submit"
               label="Login Now !"
               variant="outline"
-              className="px-6 !py-[23px] w-full mb-[40px] cursor-pointer hover:!text-black"
+              className="px-6 !py-[23px] !p-[10px] w-full lg:mb-0 xl:mb-0 md:mb-0 cursor-pointer hover:!text-black"
               disabled={!isValid || isSubmitting}
             />
           </div>
