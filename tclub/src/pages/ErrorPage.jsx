@@ -18,13 +18,13 @@ const ErrorPage = () => {
           Page Not Found
         </h2>
 
-        <div className="w-full max-w-[227px]">
+        <div className="">
           <CustomButton
             icon={arrowImg}
             label="Back To Home"
             to="/"
             variant="outline"
-            className="w-full"
+            className="w-full font-bold text-[18px] line-height tracking-normal flex items-center justify-center gap-[5px] py-3"
           />
         </div>
       </div>

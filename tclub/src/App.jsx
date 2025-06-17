@@ -23,7 +23,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<HomePage />} /> 
-        <Route path='/health' element={<HomeSeminar />} />
+        <Route path='/upcomingseminar' element={<HomeSeminar />} />
         <Route path='/seminar' element={<SeminarPage />} />
         <Route path='/seminarpage' element={<SeminarPageTwo />} />
         <Route path='/heroes' element={<HeroesPage />} />

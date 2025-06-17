@@ -27,38 +27,38 @@ const contactDetails = [
 
 const ContactInfo = () => {
   return (
-    <div className="p-[30px] bg-[#F9FEF5] rounded-lg shadow-md">
+    <div className="p-[30px] bg-[#F9FEF5] rounded-lg  md:!mb-[40px] mt-[40px] md:mt-0">
       <div className="mb-6">
-        <h3 className="text-2xl font-semibold mb-2 text-gray-800">Contact Info</h3>
-        <p className="text-gray-600 w-full max-w-[566px]">
+        <h3 className="text-[35px] font-semibold mb-[15px] text-[#0A2540]">Contact Info</h3>
+        <p className="text-[#40658B] font-normal text-[16px] line-height w-full max-w-[566px]">
           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
         </p>
       </div>
 
       <ul className="space-y-6 w-full">
-  {contactDetails.map((item) => (
-    <li
-      key={item.id}
-      className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full"
-    >
-      <div className="w-[56px] h-[56px] sm:w-[64px] sm:h-[64px] md:w-[72px] md:h-[72px] flex items-center justify-center bg-[#CFE8C8] rounded-xl shrink-0">
-        <img
-          src={item.icon}
-          alt={`${item.title} icon`}
-          className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
-        />
-      </div>
-      <div className="flex-1 w-full">
-        <p className="text-sm sm:text-base md:text-md font-semibold text-gray-700 mb-2">
-          {item.title}
-        </p>
-        <span className="text-gray-600 break-words text-sm sm:text-base md:text-sm w-full block">
-          {item.value}
-        </span>
-      </div>
-    </li>
-  ))}
-</ul>
+          {contactDetails.map((item) => (
+            <li
+              key={item.id}
+              className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full"
+            >
+              <div className="w-[56px] h-[56px] sm:w-[64px] sm:h-[64px] md:w-[72px] md:h-[72px] flex items-center justify-center bg-[#CFE8C8] rounded-xl shrink-0">
+                <img
+                  src={item.icon}
+                  alt={`${item.title} icon`}
+                  className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
+                />
+              </div>
+              <div className="flex-1 w-full">
+                <p className="text-sm sm:text-base md:text-md font-bold text-[#0A2540] line-height mb-2">
+                  {item.title}
+                </p>
+                <span className="text-[#40658B] font-normal text-[16px] line-height break-words  sm:text-base md:text-sm w-full block">
+                  {item.value}
+                </span>
+              </div>
+            </li>
+          ))}
+        </ul>
 
     </div>
   );

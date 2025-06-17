@@ -69,12 +69,12 @@ export default function Contact() {
 
   return (
     <div className="w-full h-full md:w-full px-0 sm:px-2 md:px-2">
-      <h2 className="text-4xl font-bold text-gray-800 mb-6">Get In Touch</h2>
+      <h2 className="text-[45px] line-height font-medium text-[#0A2540] mb-[50px]">Get In Touch</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
           {/* First Name */}
           <div className="relative">
-            <label className="absolute top-[-10px] left-4 bg-white px-1 text-sm font-medium text-gray-700 z-10">
+            <label className="absolute text-[14px] font-bold text-[#0A2540] top-[-10px] left-4 bg-white px-1  z-10">
               First Name
             </label>
             <div className="relative">
@@ -82,12 +82,13 @@ export default function Contact() {
                 src={userImg}
                 alt="user icon"
                 className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4"
+    
               />
               <input
                 {...register('firstName')}
                 type="text"
-                placeholder="Enter your first name"
-                className={`w-full pl-10 pr-4 py-2 rounded-md focus:outline-none border ${
+                placeholder="Enter Your First Name"
+                className={`w-full pl-[35px] pr-4 rounded-md focus:outline-none border py-[20px] text-[12px] font-light text-[#40658B] ${
                   firstNameValue.trim() && errors.firstName ? 'border-red-500' : 'border-gray-300'
                 }`}
               />
@@ -99,7 +100,7 @@ export default function Contact() {
 
           {/* Last Name */}
           <div className="relative">
-            <label className="absolute top-[-10px] left-4 bg-white px-1 text-sm font-medium text-gray-700 z-10">
+            <label className="absolute text-[14px] font-bold text-[#0A2540] top-[-10px] left-4 bg-white px-1 z-10">
               Last Name
             </label>
             <div className="relative">
@@ -111,8 +112,8 @@ export default function Contact() {
               <input
                 {...register('lastName')}
                 type="text"
-                placeholder="Enter your last name"
-                className={`w-full pl-10 pr-4 py-2 rounded-md focus:outline-none border ${
+                placeholder="Enter Your Last Name"
+                className={`w-full pl-[35px] pr-4 py-[20px] text-[12px] font-light text-[#40658B] rounded-md focus:outline-none border ${
                   lastNameValue.trim() && errors.lastName ? 'border-red-500' : 'border-gray-300'
                 }`}
               />
@@ -124,7 +125,7 @@ export default function Contact() {
 
           {/* Phone */}
           <div className="relative">
-            <label className="absolute top-[-10px] left-4 bg-white px-1 text-sm font-medium text-gray-700 z-10">
+            <label className="absolute  text-[14px] font-bold text-[#0A2540] top-[-10px] left-4 bg-white px-1 z-10">
               Phone Number
             </label>
             <div className="relative">
@@ -136,8 +137,8 @@ export default function Contact() {
               <input
                 {...register('phone')}
                 type="text"
-                placeholder="Enter your phone number"
-                className={`w-full pl-10 pr-4 py-2 rounded-md focus:outline-none border ${
+                placeholder="Enter Your Phone Number"
+                className={`w-full pl-[35px] pr-4 py-[20px] text-[12px] font-light text-[#40658B] rounded-md focus:outline-none border ${
                   phoneValue.trim() && errors.phone ? 'border-red-500' : 'border-gray-300'
                 }`}
               />
@@ -149,7 +150,7 @@ export default function Contact() {
 
           {/* Email */}
           <div className="relative">
-            <label className="absolute top-[-10px] left-4 bg-white px-1 text-sm font-medium text-gray-700 z-10">
+            <label className="absolute text-[14px] font-bold text-[#0A2540] top-[-10px] left-4 bg-white px-1 z-10">
               Email
             </label>
             <div className="relative">
@@ -161,8 +162,8 @@ export default function Contact() {
               <input
                 {...register('email')}
                 type="email"
-                placeholder="Enter your email"
-                className={`w-full pl-10 pr-4 py-2 rounded-md focus:outline-none border ${
+                placeholder="Enter Your Email"
+                className={`w-full pl-[35px] pr-4 py-[20px] text-[12px] font-light text-[#40658B] rounded-md focus:outline-none border ${
                   emailValue.trim() && errors.email ? 'border-red-500' : 'border-gray-300'
                 }`}
               />
@@ -175,14 +176,14 @@ export default function Contact() {
 
         {/* Message */}
         <div className="relative">
-          <label className="absolute top-[-10px] left-4 bg-white px-1 text-sm font-medium text-gray-700 z-10">
+          <label className="absolute text-[14px] font-bold text-[#0A2540] top-[-10px] left-4 bg-white px-1 z-10">
             Message
           </label>
           <textarea
             {...register('message')}
-            placeholder="Enter your message"
+            placeholder="Enter Your Message"
             rows={5}
-            className={`w-full pl-4 pr-4 py-2 rounded-md focus:outline-none border ${
+            className={`w-full pl-5 pr-4 py-[20px] text-[12px] font-light text-[#40658B] rounded-md focus:outline-none border ${
               messageValue.trim() && errors.message ? 'border-red-500' : 'border-gray-300'
             }`}
           />

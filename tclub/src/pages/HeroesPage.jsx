@@ -5,6 +5,7 @@ import Pagination from '../components/Pagination';
 import cardData from '../Api/blogDataOne.json';
 import crownImg from '../assets/crown.svg';
 import usePagination from '../hooks/usePagination';
+import { NavLink } from 'react-router-dom';
 
 const HeroesPage = () => {
   const { currentPage, totalPages, currentItems, cardImg, handlePageChange } = usePagination(cardData, 8); 
@@ -52,7 +53,9 @@ const HeroesPage = () => {
                   {card.description.includes('Read More.') ? (
                     <>
                       {card.description.replace('...Read More.', '')}
-                      <span className="text-blue-600 font-medium">...Read More.</span>
+                      <NavLink to={`/details`} className="text-blue-600 font-medium hover:underline">
+                        ...Read More.
+                      </NavLink>
                     </>
                   ) : (
                     card.description

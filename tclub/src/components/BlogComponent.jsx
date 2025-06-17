@@ -10,9 +10,9 @@ const BlogComponent = ({ blogData, extraContent = null, buttonClass = '' }) => {
             {blogData.map((item, index) => (
                 <div
                 key={index}
-                className="border border-[#D4DEEB] py-[20px] pl-[15px] rounded-xl bg-white text-left flex  xl:flex-row lg:flex-col flex-col md:flex-row   gap-3 sm:gap-4 w-full items-start lg:items-center sm:items-center justify-between"
+                className="border border-[#D4DEEB] py-[20px] pl-[15px] rounded-xl bg-white text-left flex  xl:flex-row lg:flex-col flex-col md:flex-col   gap-3 sm:gap-4 w-full items-start lg:items-center sm:items-center justify-between"
                 >
-                     <div className="flex flex-col xxl:flex-col lg:flex-col sm:!pr-[15px] pr-[15px]  gap-3 sm:gap-4 w-full flex-1 items-start sm:items-center  md:!flex-row md:gap-[15px] lg:gap-[15px] md:items-center">
+                     <div className="flex flex-col xxl:flex-col sm:!pr-[15px] pr-[15px]  gap-3 sm:gap-4 w-full flex-1 items-start sm:items-center lg:!flex-row  md:!flex-col md:gap-[15px] lg:gap-[15px] md:items-center">
                         <img
                         src={item.image}
                         alt="blog"
@@ -48,7 +48,7 @@ const BlogComponent = ({ blogData, extraContent = null, buttonClass = '' }) => {
                                 <>
                                 <CustomButton
                                     label="Book Seats"
-                                    to="/seminarpagetwo"
+                                    to="/seminarpage"
                                     variant="outline"
                                     className={`w-auto !py-[20px] !px-[22px] !text-[14px] !font-semibold lg:w-[100%] md:w-auto sm:w-[100%] shadow-[8px_6px_15px_0px_#0061DE40] ${buttonClass}`}
                                 />
@@ -59,7 +59,7 @@ const BlogComponent = ({ blogData, extraContent = null, buttonClass = '' }) => {
                             ) : (
                                 <CustomButton
                                 label="Read More"
-                                to="/"
+                                to="/seminarpage"
                                 variant="primary"
                                 className={`w-auto lg:w-[100%] md:w-auto sm:w-[100%] !py-[20px] !px-[22px] !text-[14px] !font-semibold ${buttonClass}`}
                                 />
