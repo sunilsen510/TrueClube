@@ -1,7 +1,7 @@
 import React from 'react';
-import locationIcon from '../assets/map.svg';
-import phoneIcon from '../assets/phone.svg';
-import emailIcon from '../assets/mail2.svg';
+import locationIcon from '../assets/maps.svg';
+import phoneIcon from '../assets/phones.svg';
+import emailIcon from '../assets/mails.svg';
 
 const contactDetails = [
   {
@@ -29,7 +29,13 @@ const ContactInfo = () => {
   return (
     <div className="p-[30px] bg-[#F9FEF5] rounded-lg  md:!mb-[40px] mt-[40px] md:mt-0">
       <div className="mb-6">
-        <h3 className="text-[35px] font-semibold mb-[15px] text-[#0A2540]">Contact Info</h3>
+        <h3 className=" text-[22px] leading-[30px]
+            sm:text-[26px] sm:leading-[34px] 
+            md:text-[30px] md:leading-[38px] 
+            lg:text-[35px] lg:leading-[41px] 
+            font-semibold 
+            mb-[15px] 
+          text-[#0A2540]">Contact Info</h3>
         <p className="text-[#40658B] font-normal text-[16px] line-height w-full max-w-[566px]">
           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
         </p>
@@ -45,14 +51,18 @@ const ContactInfo = () => {
                 <img
                   src={item.icon}
                   alt={`${item.title} icon`}
-                  className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
+                  className="w-[32px] h-[32px] object-contain"
                 />
               </div>
               <div className="flex-1 w-full">
-                <p className="text-sm sm:text-base md:text-md font-bold text-[#0A2540] line-height mb-2">
+                <p className="text-[16px] leading-[22px] 
+                    sm:text-[18px] sm:leading-[24px]
+                    md:text-[20px] md:leading-[26px]
+                    lg:text-[25px] lg:leading-[27px]
+                    font-bold text-[#0A2540] tracking-[0] mb-2">
                   {item.title}
                 </p>
-                <span className="text-[#40658B] font-normal text-[16px] line-height break-words  sm:text-base md:text-sm w-full block">
+                <span className="text-[#40658B] font-normal text-[18px] leading-[27px] tracking-[0] break-words block">
                   {item.value}
                 </span>
               </div>

@@ -3,6 +3,7 @@ import CustomButton from '../components/CustomButton';
 import emailImg from '../assets/email.svg';
 import userImg from '../assets/user.svg';
 import callImg from '../assets/call.svg';
+import { useNavigate } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -23,7 +24,7 @@ const contactSchema = z.object({
       z
         .string()
         .trim()
-        .min(1, 'Phone number is required')
+        .min(10, 'Phone number is required')
         .regex(/^[0-9]{10,}$/, 'Invalid phone number')
     ),
 
@@ -62,14 +63,33 @@ export default function Contact() {
   const emailValue = watch('email', '');
   const messageValue = watch('message', '');
 
+  const navigate = useNavigate();
+
   const onSubmit = (data) => {
+     if (!isValid) {
+      navigate('/error');
+      return;
+    }
     console.log('Form data:', data);
     reset();
   };
 
+
+  const handleNavigate = (route) => {
+    const isValid = false; 
+
+    if (isValid) {
+      navigate(route);
+    } else {
+      navigate("/error");
+    }
+  };
+
+
   return (
     <div className="w-full h-full md:w-full px-0 sm:px-2 md:px-2">
-      <h2 className="text-[45px] line-height font-medium text-[#0A2540] mb-[50px]">Get In Touch</h2>
+      <h2 className="text-[24px] leading-[32px] sm:text-[30px] sm:leading-[38px] md:text-[36px] md:leading-[44px] lg:text-[45px] lg:leading-[53px]  
+        font-medium text-[#0A2540] mb-[30px] lg:mb-[50px]">Get In Touch</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
           {/* First Name */}
@@ -197,13 +217,16 @@ export default function Contact() {
           <CustomButton
             type="submit"
             label="Submit"
+            onClick={() => handleNavigate("/login")}
             variant="outline"
-            className="px-6"
+            className="px-6 w-full lg:mb-0 xl:mb-0 md:mb-0 cursor-pointer hover:!text-black"
             disabled={!isValid || isSubmitting}
-            onClick={handleSubmit(onSubmit)}
+            
           />
         </div>
       </form>
     </div>
   );
 }
+
+

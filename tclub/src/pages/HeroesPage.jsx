@@ -17,7 +17,7 @@ const HeroesPage = () => {
         <Banner title="OUR HEROES" image={heroesImage} width={315} height={342} />
       </div>
       <div className="flex items-center justify-center w-full">
-        <span className="bg-[#E5F5E5] font-semibold text-[#0A2540]] py-[10px] px-[20px] w-[230px] text-center rounded-b-2xl">
+        <span className="bg-[#E5F5E5] text-[14px] leading-[27px] tracking-[0] font-semibold text-[#0A2540]] py-[10px] px-[20px] w-[230px] text-center rounded-b-2xl">
           Stories Of The Heroes
         </span>
       </div>
@@ -44,7 +44,7 @@ const HeroesPage = () => {
                 </div>
               </div>
               <div className="flex items-center w-full my-[30px] relative before:content-[''] before:absolute before:left-0 before:right-0 before:top-1/2 before:h-[1px] before:bg-[#DDDDE9]">
-                <span className="bg-[#E5F5E5] text-[14px] font-semibold text-[#0A2540] py-[10px] px-[20px] w-[230px] text-center z-10 rounded-[10px]">
+                <span className="bg-[#E5F5E5] text-[14px] font-semibold text-[#0A2540] py-[10px] px-[20px] w-[230px] text-center z-10 rounded-[5px]">
                   Stories Of The Heroes
                 </span>
               </div>

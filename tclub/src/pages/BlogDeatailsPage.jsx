@@ -7,7 +7,7 @@ import BlogDetails from '../components/BlogDetails';
 const BlogDeatailsPage = ({blog}) => {
   return (
     <>
-        <div className="relative lg:pt-[96px]">
+        <div className="relative lg:pt-[93px]">
             <Banner 
                 title='Trueyou.Club Realise Your Potential'
                 subtitle="" 
@@ -17,7 +17,7 @@ const BlogDeatailsPage = ({blog}) => {
                 useBeforeBg={true}
                 metaInfo={
                     <>
-                        <div className="flex lg:flex-row md:flex-col sm:flex-col items-center justify-center gap-[30px] md:gap-[10px]">
+                        <div className="flex lg:flex-row md:flex-row sm:flex-col items-center justify-center gap-[30px] md:gap-[10px]">
                             <div className="flex items-center gap-2 text-sm text-gray-600">
                                 <div className='w-[27px] h-[27px] flex items-center justify-center bg-[#D2EFD0] rounded-full p-[6px]'>
                                     <img
@@ -26,9 +26,9 @@ const BlogDeatailsPage = ({blog}) => {
                                         className="w-[18px] h-[18px]"
                                     />
                                 </div>
-                                <span className="text-black font-semibold">By : Admin</span>
+                                <span className="text-[#0A2540] text-[14px] tracking-[0] leading-[16px] font-normal">By : Admin</span>
                             </div>
-                            <div className="flex items-center gap-2 text-sm text-gray-600">
+                            <div className="flex items-center gap-2 text-sm  text-[#0A2540]">
                                 <div className='w-[27px] h-[27px] flex items-center justify-center bg-[#D2EFD0] rounded-full p-[6px]'>
                                     <img
                                         src={calenderImg}
@@ -36,7 +36,7 @@ const BlogDeatailsPage = ({blog}) => {
                                         className="w-[18px] h-[18px]"
                                     />
                                 </div>
-                                <span className="font-semibold text-black">04 - February - 2024</span>
+                                <span className="text-[#0A2540] text-[14px] tracking-[0] leading-[16px] font-normal">04 - February - 2024</span>
                             </div>
                         </div>
                     </>

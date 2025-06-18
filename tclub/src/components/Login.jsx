@@ -48,10 +48,19 @@ export default function Login() {
       console.warn('Validation failed');
     }
   };
+  const handleNavigate = (route) => {
+    const isValid = false; 
+
+    if (isValid) {
+      navigate(route);
+    } else {
+      navigate("/error");
+    }
+  };
 
   return (
     <div className="w-full flex flex-col justify-center h-full text-center md:text-left my-8 md:my-[30px] lg:my-[100px]">
-      <h2 className="text-[30px] font-medium tracking-[0] text-[#0A2540] line-height text-center">Login Now</h2>
+      <h2 className="text-[20px] sm:text-[22px] md:text-[26px] lg:text-[30px] font-medium tracking-[0] text-[#0A2540] line-height text-center">Login Now</h2>
       <div className="w-20 h-1 bg-[#006AF2] rounded-full tracking-[0]  mt-[16px]  mb-4 mx-auto" />
       <p className="text-[#40658B] text-[16px] font-normal lg:mb-[50px] mb-[20px]   text-center">
         Welcome Back! please enter your email and password.
@@ -61,11 +70,11 @@ export default function Login() {
           <div className="hidden lg:flex items-center gap-[15px] lg:gap-[0px] xl:gap-[8px] py-[5px]">
             <CustomButton
               label="Login"
-              to="/login"
+              onClick={() => handleNavigate("/login")}
               variant="outline"
-              className="shadow-[8px_6px_15px_0px_#0061DE40] ml-[5px]"
+              className="shadow-[8px_6px_15px_0px_#0061DE40] ml-[5px] hover:!text-[#0A2540] cursor-pointer"
             />
-            <CustomButton label="Sign Up" to="/signup" variant="outline" className="!px-[36px] !bg-transparent !text-[#0A2540]" />
+            <CustomButton label="Sign Up" onClick={() => handleNavigate("/signup")} variant="outline" className="!px-[36px] !bg-transparent !text-[#0A2540]" />
           </div>
         </div>
 
@@ -157,9 +166,17 @@ export default function Login() {
             <CustomButton
               type="submit"
               label="Login Now !"
+              onClick={() => handleNavigate("/login")}
               variant="outline"
-              className="px-6 !py-[23px] !p-[10px] w-full lg:mb-0 xl:mb-0 md:mb-0 cursor-pointer hover:!text-black"
-              disabled={!isValid || isSubmitting}
+              className="
+                w-full 
+                !text-[14px] lg:!text-[18px] 
+                px-4 sm:px-6 
+                !py-[18px] sm:!py-[16px] md:!py-[23px] 
+                cursor-pointer 
+                shadow-[8px_6px_15px_0px_#0061DE40] ml-[5px] 
+                hover:!text-[#0A2540]
+                not-first:disabled={!isValid || isSubmitting}"
             />
           </div>
         </form>

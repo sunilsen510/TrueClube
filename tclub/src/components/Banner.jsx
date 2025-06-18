@@ -29,11 +29,18 @@ const Banner = ({
             <div
                 className={`w-full ${
                   image
-                    ? 'lg:w-full md:w-full text-left justify-center lg:text-left  sm:text-center px-4 sm:px-4 max-w-screen-lg mx-auto lg:!mb-0  py-[90px] lg:py-[90px] xl:py-[90px] md:py-[40px] md:text-center'
-                    : 'max-w-7xl mx-auto text-center mb-2 px-4 sm:px-6'
+                    ? 'lg:w-full md:w-full text-left justify-center lg:text-left  sm:text-center px-4 sm:px-0 max-w-screen-lg mx-auto lg:!mb-0  py-[30px] lg:py-[90px] xl:py-[90px] md:py-[50px] sm:!py-[90px] md:text-center'
+                    : 'max-w-7xl mx-auto text-center mb-2 px-4 sm:px-6 pt-[50px] lg:pt-0 md:pt-[50px]'
                 }`}
               >
-              <h2 className="lg:text-[45px] text-[45px]  tracking-[0] lineh font-semibold  text-[#0A2540]  lg:mb-[30px] mb-[20px]">
+              <h2 className="
+                text-[24px] sm:text-[30px] md:text-[36px] lg:text-[45px]
+                tracking-[0]
+                font-semibold
+                text-[#0A2540]
+                lg:leading-[53px] md:leading-[30px]
+                mb-[20px] lg:mb-[30px]
+              ">
                 {title}
               </h2>
 
@@ -45,16 +52,21 @@ const Banner = ({
               )}
 
               {subtitle && (
-                <p className="text-[20px] tracking-[0] leading-[27px] line-heighted  font-normal sm:text-base md:text-lg text-[#0A2540] mb-[20px] lg:mb-[40px] lg:max-w-[470px] w-full">{subtitle}</p>
+                <p className="lg:text-[20px] sm:text-[16px] md:text-[16px] tracking-[0] leading-[27px] line-heighted  font-normal sm:text-base md:text-lg text-[#0A2540] mb-[20px] lg:mb-[40px] lg:max-w-[470px] w-full">{subtitle}</p>
               )}
 
               {primaryButtonLabel && primaryButtonLink && (
-                <div className="flex flex-col sm:flex-row gap-4 justify-start md:justify-center lg:justify-start">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-center lg:justify-start">
                   <CustomButton
                     label={primaryButtonLabel}
                     to={primaryButtonLink}
                     variant="outline"
-                    className="shadow-[8px_6px_15px_0px_#0061DE40] !px-[30px] !py-[24px] !text-[16px] leading-[13px]"
+                    className="
+                      shadow-[8px_6px_15px_0px_#0061DE40]
+                      !px-[22px] sm:!px-[24px] md:!px-[26px] lg:!px-[30px]
+                      !py-[16px] sm:!py-[18px] md:!py-[20px] lg:!py-[24px]
+                      !text-[14px] sm:!text-[15px] md:!text-[16px]
+                      leading-[13px]"
                   />
                 </div>
               )}

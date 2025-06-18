@@ -3,7 +3,7 @@ import CustomButton from './CustomButton';
 import locationImg from '../assets/location.svg'; 
 import calenderImg from '../assets/calendar.svg'; 
 
-const BlogComponent = ({ blogData, extraContent = null, buttonClass = '' }) => {
+const BlogComponent = ({ blogData, extraContent = null, buttonClass = '', width = '', maxWidth = '',  }) => {
   return (
     <>
         <div className="w-full flex flex-wrap gap-6 justify-center">
@@ -43,7 +43,7 @@ const BlogComponent = ({ blogData, extraContent = null, buttonClass = '' }) => {
                             
                             </div>
                         </div>
-                        <div className="flex flex-col justify-center items-center flex-none md:self-stretch gap-2 !pr-[20px] md:!w-100%">
+                        <div className={`flex flex-col justify-center items-center flex-none md:self-stretch gap-2 !pr-[20px] md:!w-100% ${width} ${maxWidth} `}>
                             {item.id === 1 ? (
                                 <>
                                 <CustomButton
@@ -53,7 +53,7 @@ const BlogComponent = ({ blogData, extraContent = null, buttonClass = '' }) => {
                                     className={`w-auto !py-[20px] !px-[22px] !text-[14px] !font-semibold lg:w-[100%] md:w-auto sm:w-[100%] shadow-[8px_6px_15px_0px_#0061DE40] ${buttonClass}`}
                                 />
                                 {extraContent && (
-                                    <span className="text-[12px] text-[#DA7821] font-medium">{extraContent}</span>
+                                    <span className="text-[16px] text-[#DA7821] font-semibold leading-[17px] tracking-[0] mt-[8px]">{extraContent}</span>
                                 )}
                                 </>
                             ) : (
@@ -61,7 +61,7 @@ const BlogComponent = ({ blogData, extraContent = null, buttonClass = '' }) => {
                                 label="Read More"
                                 to="/seminarpage"
                                 variant="primary"
-                                className={`w-auto lg:w-[100%] md:w-auto sm:w-[100%] !py-[20px] !px-[22px] !text-[14px] !font-semibold ${buttonClass}`}
+                                className={`w-auto lg:w-[100%] md:w-auto sm:w-[100%] !py-[20px] !px-[22px] !text-[14px] hover:shadow-[8px_6px_15px_0px_#0061DE40] !font-semibold ${buttonClass}`}
                                 />
                             )}
                             </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import mainLogo from "../assets/logo.svg";
 import userLogo from "../assets/nlogo.svg";
 import bellImg from "../assets/notification.svg";
@@ -35,7 +35,19 @@ const Header = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const location = useLocation();
+  const navigate = useNavigate();
   const isHome = location.pathname === "/";
+
+  
+  const handleNavigate = (route) => {
+    const isValid = false; 
+
+    if (isValid) {
+      navigate(route);
+    } else {
+      navigate("/error");
+    }
+  };
 
   return (
     <header className="bg-white fixed top-0 left-0 w-full z-50 border-b border-gray-200">
@@ -77,11 +89,11 @@ const Header = () => {
           <div className="hidden lg:flex items-center gap-[15px] lg:gap-[15px] xl:gap-[30px]">
             <CustomButton
               label="Login"
-              to="/login"
+              onClick={() => handleNavigate("/login")}
               variant="outline"
-              className="shadow-[8px_6px_15px_0px_#0061DE40]"
+              className="shadow-[8px_6px_15px_0px_#0061DE40] hover:!text-[#0A2540]"
             />
-            <CustomButton label="Sign Up" to="/signup" variant="primary" className="!px-[36px]" />
+            <CustomButton label="Sign Up" onClick={() => handleNavigate("/signup")} variant="primary" className="!px-[36px]" />
           </div>
         ) : (
           <div className="hidden lg:flex items-center gap-6">
@@ -96,13 +108,12 @@ const Header = () => {
               <img
                 src={userImage}
                 alt="User"
-                className="w-10 h-10 rounded-full object-cover"
+                className="w-[50px] h-[50px] rounded-full object-cover"
               />
-              <div className="text-sm text-gray-800">
+              <div className="text-sm text-[#0A2540]">
                 <ul>
-                  <li>Welcome</li>
-                  <li className="flex items-center gap-1 font-semibold">
-                    Jane Copper
+                  <li className="font-normal text-[12px] text-[#40658B]">Welcome</li>
+                  <li className="flex items-center gap-1 font-semibold">  
                     <DropDown />
                   </li>
                 </ul>

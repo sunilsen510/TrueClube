@@ -40,9 +40,19 @@ const BlogCard = ({ blog, locationImg, calendarImg, userImg, cardImg, cardTitle}
         {/* CTA Button */}
         <CustomButton
           label="Read More"
-          to={blog.id === 1 ? "/seminarpage" : "/healths"}
-          variant={blog.id === 1 ? "outline" : "primary"}
-          className="w-auto lg:w-[100%] md:w-auto sm:w-[100%] !py-[20px] !px-[22px] !text-[14px] !font-semibold"
+          to={blog.id === 0 ? "/seminarpage" : "/healths"}
+          variant={blog.id === 0 ? "outline" : "primary"}
+          className="
+            w-auto sm:w-full md:w-auto lg:w-full
+            hover:shadow-[8px_6px_15px_0px_#0061DE40]
+            transition-shadow duration-300
+            !px-[22px] sm:!px-[24px] md:!px-[26px] lg:!px-[30px]
+            !py-[16px] sm:!py-[18px] md:!py-[20px] lg:!py-[24px]
+            !text-[14px] sm:!text-[15px] md:!text-[16px]
+            !font-semibold
+            leading-[13px]
+            mb-[10px]
+          "
         />
       </div>
     </div>

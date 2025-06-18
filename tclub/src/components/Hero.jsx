@@ -21,13 +21,13 @@ const HeroBanner = ({
         <div className="xl:container lg:container-fluid  mx-auto px-4 flex flex-col lg:flex-row items-stretch justify-between gap-6 sm:gap-6 md:gap-6">
 
           {/* Text Section */}
-          <div className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left">
-            <h1 className="lg:text-[55px] text-[45px]  tracking-[0] font-semibold lh text-[#0A2540]  lg:mb-[50px] mb-[20px]">
-              {title}
-            </h1>
-            <p className="text-[20px] tracking-[0] leading-[27px] line-height  font-normal sm:text-base md:text-lg text-[#0A2540] mb-[20px] lg:mb-[50px] lg:max-w-[470px] w-full">
-              {subtitle}
-            </p>
+          <div className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left pt-[55px] lg:pt-0">
+          <h1 className="text-[25px] sm:text-[32px] md:text-[40px] lg:text-[55px] leading-[36px] sm:leading-[42px] md:leading-[50px] lg:leading-[64px] font-semibold text-[#0A2540] mb-[20px] lg:mb-[50px] tracking-[0]">
+            {title}
+          </h1>
+          <p className="text-[15px] sm:text-[16px] md:text-[18px] lg:text-[20px] leading-[24px] text-[#0A2540] mb-[20px] lg:mb-[50px] lg:max-w-[470px] w-full font-normal">
+            {subtitle}
+          </p>
 
             <div className="flex flex-col sm:flex-row gap-[14px] md:!gap-[30px] sm:!gap-[30px] h-[100%] lg:max-h-[60px] md:h-[60px] justify-center lg:justify-start">
                   
@@ -35,13 +35,17 @@ const HeroBanner = ({
                 label={secondaryButtonLabel}
                 to="/upcomingseminar"
                 variant="outline"
-                className="shadow-[8px_6px_15px_0px_#0061DE40] !px-[30px] !py-[24px] !text-[16px] leading-[13px]"
+                className="shadow-[8px_6px_15px_0px_#0061DE40] 
+                  !px-[22px] sm:!px-[24px] md:!px-[26px] lg:!px-[30px] 
+                  !py-[16px] sm:!py-[18px] md:!py-[20px] lg:!py-[24px]
+                  !text-[14px] sm:!text-[15px] md:!text-[16px] leading-[13px]"
               />
               <CustomButton
                   label={primaryButtonLabel}
                   to={primaryButtonLink}
                   variant="primary"
-                  className="bg-transparent !px-[30px] !py-[24px] border-1 !text-[16px]  leading-[13px] font-semibold border-blue-600 !text-[#006AF2] hover:!text-blue-600"
+                  className="bg-transparent !px-[30px] hover:shadow-[8px_6px_15px_0px_#0061DE40] ml-[5px]
+                  !py-[16px] border-1 !text-[16px]  leading-[13px] font-semibold border-blue-600 !text-[#006AF2] hover:!text-blue-600"
                 />
                 </div>
               </div>
@@ -63,6 +67,3 @@ const HeroBanner = ({
 };
 
 export default HeroBanner;
-
-
-
