@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const contactSchema = z.object({
@@ -66,13 +68,14 @@ export default function Contact() {
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
-     if (!isValid) {
-      navigate('/error');
-      return;
-    }
-    console.log('Form data:', data);
-    reset();
-  };
+  if (!isValid) {
+    navigate('/error');
+    return;
+  }
+  console.log('Form data:', data);
+  toast.success('Form submitted successfully!');
+  reset();
+};
 
 
   const handleNavigate = (route) => {
@@ -217,11 +220,10 @@ export default function Contact() {
           <CustomButton
             type="submit"
             label="Submit"
-            onClick={() => handleNavigate("/login")}
+            
             variant="outline"
             className="px-6 w-full lg:mb-0 xl:mb-0 md:mb-0 cursor-pointer hover:!text-black"
             disabled={!isValid || isSubmitting}
-            
           />
         </div>
       </form>
