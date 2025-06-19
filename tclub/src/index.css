@@ -1,23 +1,91 @@
 @import "tailwindcss";
 
+/* CSS Variables */
+
 :root {
-
-
+  /* Button Colors */
   --btn-primary-bg: #006AF2;
-  --btn-primary-hover: #006AF2;
+  --btn-primary-hover: #004EC0;
   --btn-primary-text: #ffffff;
- 
-
 
   --btn-outline-bg: transparent;
   --btn-outline-hover: #F5F7F9;
-  --btn-outline-text: white;
+  --btn-outline-text: #006AF2;
   --btn-outline-border: #006AF2;
+  --btn-outline-hover-text: #2563eb;
+
+  /* Button Sizes */
+  --btn-padding-x: 30px;
+  --btn-padding-y: 24px;
+  --btn-font-size: 16px;
+
+  /* Button Shadow */
+  --btn-shadow: 8px 6px 15px 0px #0061DE40;
+
+  /* Text Colors */
+  --text-primary: #0A2540;
+  --text-secondary: #40658B;
+  --text-danger: #FF4D4F;
+  --text-link: #2563eb;
+  --text-muted: #6B7280;
+  --text-light: #ffffff;
+  --text-dark: #000000;
+
+  /* Global Theme Colors */
+  --color-primary: #0A2540;
+  --color-secondary: #40658B;
+  --color-accent: #006AF2;
+  --color-error: #EF4444;
+  --color-border: #D1D5DB;
+
+  /* Highlights and Badges */
+  --highlight-color: #DA7821;
+  --highlight: #0EB8FF;
+  --vip-bg: #112B4D;
+  --badge-bg: #F9FEF5;
+
+  /* Dividers & Borders */
+  --divider-color: #D4DEEB;
+  --border-light: #DDDDE9;
+
+  /* Typography Sizes */
+  --text-sm: 12px;
+  --text-xl: 24px;
+  --line-xl: 32px;
+
+  /* Layout & Spacing */
+  --gap-desktop: 40px;
+  --gap-tablet: 16px;
+  --container-padding: 16px;
+  --btn-x: 28px;
+  --btn-y: 14px;
+  --hero-pt: 80px;
+
+  /* Hero Section */
+  --hero-padding-top: 93px;
+  --hero-title-size: 55px;
+  --hero-title-line: 64px;
+  --hero-subtitle-size: 20px;
+  --hero-subtitle-line: 24px;
+  --hero-gap: 30px;
+
+  /* Hero Image */
+  --img-max-width: 450px;
+  --img-max-height: 527px;
+  --img-border-top: 4px;
+  --img-border-side: 2px;
+  --img-border-color: #D4DEEB;
+
+  /* Contact Us (Form Input Padding) */
+  --input-padding-x: 35px;
+  --input-padding-y: 20px;
 }
 
+
+
+/* Typography */
 a {
   text-decoration: inherit;
-  
 }
 a:hover {
   color: #000000 !important;
@@ -25,39 +93,19 @@ a:hover {
 
 body {
   margin: 0;
-  /* display: flex;
-  place-items: center; */
-  /* min-width: 320px;
-  min-height: 100vh; */
   background-color: white;
   font-family: "Roboto", sans-serif;
 }
-
-
 
 button:focus,
 button:focus-visible {
   outline: 0px auto -webkit-focus-ring-color;
 }
 
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
-
-
+/* Optional: Hero Background Overlay */
 .before-bg {
   position: relative;
 }
-
 .before-bg::before {
   content: "";
   position: absolute;
@@ -69,12 +117,15 @@ button:focus-visible {
   height: calc(100% + 300px); 
 }
 
+/* Autofill Fix */
 input:-webkit-autofill {
-  background-color: #ffffff !important; /* Light cyan background */
+  background-color: #ffffff !important;
   transition: background-color 5000s ease-in-out 0s;
   -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
-  -webkit-text-fill-color: #000 !important; /* Optional: change text color */
+  -webkit-text-fill-color: #000 !important;
 }
+
+/* Utility Classes */
 .container-fluid {
   max-width: 1920px;
 }
@@ -94,4 +145,3 @@ input:-webkit-autofill {
 .lineh {
   line-height: 53px;
 }
-

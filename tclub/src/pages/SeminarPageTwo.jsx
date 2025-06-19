@@ -8,11 +8,11 @@ const SeminarPageTwo = () => {
     <>
       <Banner />
       <section className="">
-        <div className="container mx-auto flex flex-col md:flex-row items-start relative h-full">
-          <div className="w-full md:w-1/2 px-4 h-full">
+        <div className="container mx-auto flex flex-col xl:flex-row lg:flex-col md:flex-col items-start relative h-full">
+          <div className="w-full lg:w-full  px-4 h-full">
             <UpcomingSeminar showHeading={false} blogData={blogData.slice(0, 5)} />
           </div>
-          <div className="w-full md:w-1/2 px-4 h-full">
+          <div className="w-full lg:w-full px-4 h-full">
             <UpcomingSeminar showHeading={false} blogData={blogData.slice(0, 5)} />
           </div>
         </div>
@@ -22,3 +22,5 @@ const SeminarPageTwo = () => {
 };
 
 export default SeminarPageTwo;
+
+

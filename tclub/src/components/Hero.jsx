@@ -1,6 +1,6 @@
 import React from 'react';
 import heroImage from '../assets/heroImg.svg';
-import CustomButton from '../components/CustomButton'; // Capitalize component name to match file
+import CustomButton from '../components/CustomButton'; 
 import bgImage from '../assets/heroBg.svg';
 
 const HeroBanner = ({
@@ -50,7 +50,7 @@ const HeroBanner = ({
                 </div>
               </div>
           {/* Image Section */}
-          <div className="w-full lg:w-1/2 flex items-center justify-end lg:justify-end sm:justify-center pt-[55px]">
+          <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end sm:justify-center md:justify-center pt-[55px]">
             <div className="w-full max-w-[450px] max-h-[527px] h-full rounded-t-full border-t-[21px] border-l-[17px] border-r-[17px] border-[#E4F3DD] overflow-hidden">
               <img
                 src={image}
