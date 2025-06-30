@@ -6,7 +6,7 @@ import FilledDays from '../../components/FilledDays';
 import glassImgs from '../../assets/glasses.svg';
 import customGlass from '../../assets/singleGlass.svg';
 import yogaBoy from '../../assets/yogaboy.svg';
-
+import cClose from '../../assets/CloseBanner.svg';
 
 const Dashboard = () => {
     const [width, setWidth] = useState('w-0');
@@ -21,10 +21,10 @@ const Dashboard = () => {
   return (
     <>
       
-      <div className='mt-[34px] rounded-[10px]'>
+      <div className='mt-[34px] rounded-[10px] relative'>
         <Banner
           title="DID YOU COMPLETE YOUR TASK?"
-          titleSize="lg:text-[40px]"
+          titleSize="xl:text-[40px] lg:text-[35px] md:text-[30px]"
           image={tGirls}
           width={525}
           height={225}
@@ -39,10 +39,13 @@ const Dashboard = () => {
           roundedBr="rounded-[20px]" 
           objectFit="object-cover"
           objectPosition="object-center"
-          lineHeight='leading-[48px]'
+          lineHeight='xl:leading-[48px] lg:leading-[40px] md:leading-[35px]'
           gapClass='!gap-[0px]'
           padleft='!pl-[40px]'
         />
+        <div>
+          <img src={cClose} alt='Close count' className="absolute top-[25px] right-[15px] -translate-x-1/2 -translate-y-1/2 cursor-pointer" />
+        </div>
       </div>
       <div className='mt-[30px]'>
         <div className='py-[20px] px-[30px] bg-[#F5F7F9] rounded-[20px]'>
@@ -103,7 +106,6 @@ const Dashboard = () => {
           <div className=" pr-[40px] flex-shrink-0 w-[292px] h-[251px]">
             <img src={yogaBoy} alt="Yoga Boy" className="w-full h-full object-contain" />
           </div>
-
         </div>
       </div>
     </>

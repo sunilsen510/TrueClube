@@ -87,8 +87,9 @@
 a {
   text-decoration: inherit;
 }
-a:hover {
-  color: #000000 !important;
+/* ✅ Only affect public layout if needed */
+.public-layout a:hover {
+  color: #000000;
 }
 
 body {

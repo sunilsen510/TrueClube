@@ -47,28 +47,28 @@ const DropDown = () => {
         {/* Dropdown Content */}
         <div className="divide-y divide-gray-200 px-2">
             <Link
-              to="/dashboard"
+              to="/admin/dashboard"
               className="flex items-center gap-3 px-4 py-3 text-[18px] text-[#0A2540] hover:bg-transparent"
             >
               <LayoutDashboard className="w-5 h-5 text-gray-600" />
               Dashboard
             </Link>
             <Link
-              to="/profile"
+              to="/admin/profile"
               className="flex items-center gap-3 px-4 py-3 text-[18px] text-[#0A2540]hover:bg-transparent"
             >
               <User className="w-5 h-5 text-gray-600" />
               Profile Settings
             </Link>
             <Link
-              to="/webinar"
+              to="/admin/webinar"
               className="flex items-center gap-3 px-4 py-3 text-[18px] text-[#0A2540] hover:bg-transparent"
             >
               <Video className="w-5 h-5 text-gray-600" />
               Webinar
             </Link>
             <Link
-              to="/logout"
+              to="/admin/logout"
               className="flex items-center gap-3 px-4 py-3 text-[18px] text-[#0A2540] hover:bg-transparent"
             >
               <LogOut className="w-5 h-5 text-gray-600" />

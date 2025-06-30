@@ -1,17 +1,40 @@
 import React from 'react'
 import timerImg from '../../assets/boyss.svg';
 import CustomButton from '../../components/CustomButton'; 
+import CountdownTimer from '../../components/CountDown';
+import { NavLink,useLocation  } from 'react-router-dom';
+import AdminQuoteSection from '../../components/AdminQuoteSection';
+import AdminVipBoard from '../../components/AdminVipBoard';
 
 const WebinarPage = (buttonClass = '',) => {
+  const location = useLocation();
   
   return (
     <>
-      <div className="bg-white mt-[50px]  rounded-[20px]">
-        <h2 className="text-[25px] sm:text-[22px] md:text-[26px] lg:text-[30px] font-medium leading-[27px] tracking-[0] text-[var(--text-primary)] text-start">
+      <div className="bg-white mt-[50px] mx-[26px]  rounded-[20px]">
+        <div className='flex items-center justify-between'>
+        <div>
+          <h2 className="text-[25px] sm:text-[22px] md:text-[26px] lg:text-[30px] font-medium leading-[27px] tracking-[0] text-[var(--text-primary)] text-start">
           Upcoming Webinars
         </h2>
         <div className="w-20 h-1 bg-[var(--btn-primary-bg)] font-semibold rounded-full mt-[20px]"></div>
+        </div>
+        <div>
+          <>
+          {/* Only show on admin page, hide on /webinar */}
+            {location.pathname !== '/webinar' && (
+              <NavLink
+                to="/webinar"
+                className="text-[16px] font-medium text-[var(--btn-primary-bg)] hover:underline"
+              >
+                View All
+              </NavLink>
+            )}
+            </>
+        </div>
+        </div>
       </div>
+      
       <div className='flex items-center justify-center gap-[30px] mt-[40px] mx-[26px]'>
           <div className='w-1/2'>
             <div className='flex items-center gap-[20px] rounded-[11px]  bg-[#ffffff] border border-[#D4DEEB]  p-[30px]'>
@@ -111,41 +134,10 @@ const WebinarPage = (buttonClass = '',) => {
                   </div>
                 <span className="font-semibold text-[var(--highlight-color)] text-[14px] leading-[17px] tracking-[0]">02 February 2024, 09:00AM EST</span>
                 </div>
-                <div className="flex items-center gap-[4px] md:gap-[4px] mb-[10px] rounded-[10px]">
-              {/* Days */}
-              <div className="flex flex-col items-center justify-center bg-[#F5F7F9] rounded-[10px] p-12px w-[53px] h-[53px]" data-label="days" data-value="0">
-                <b className="text-[16px] md:text-[16px] text-[var(--text-primary)] font-semibold">21</b>
-                <span className="text-[10px] md:text-[10px] font-normal text-[#40658B]">Days</span>
-              </div>
-
-              <span className="text-xl text-[var(--text-primary)] font-semibold">:</span>
-
-              {/* Hours */}
-              <div className="flex flex-col items-center justify-center bg-[#F5F7F9] rounded-[10px] p-12px w-[53px] h-[53px]" data-label="hours" data-value="3">
-                <b className="text-[16px] md:text-[16px] text-[var(--text-primary)] font-semibold">08</b>
-                <span className="text-[10px] md:text-[10px] font-normal text-[#40658B]">Hours</span>
-              </div>
-
-              <span className="text-xl text-[var(--text-primary)] font-semibold">:</span>
-
-              {/* Minutes */}
-              <div className="flex flex-col items-center justify-center bg-[#F5F7F9] rounded-[10px] p-12px w-[53px] h-[53px]" data-label="minutes" data-value="40">
-                <b className="text-[16px] md:text-[16px] text-[var(--text-primary)] font-semibold">35</b>
-                <span className="text-[10px] md:text-[10px] font-normal text-[#40658B]">Minutes</span>
-              </div>
-
-              <span className="text-xl text-[var(--text-primary)] font-semibold">:</span>
-
-              {/* Seconds */}
-              <div className="flex flex-col items-center justify-center bg-[#F5F7F9] rounded-[10px] p-12px w-[53px] h-[53px]" data-label="seconds" data-value="2">
-                <b className="text-[16px] md:text-[16px] text-[var(--text-primary)] font-semibold">09</b>
-                <span className="text-[10px] md:text-[10px] font-normal text-[#40658B]">Seconds</span>
-              </div>
-              </div>
+                <CountdownTimer bgColor="#F5F7F9" />
               </div>
             </div>
           </div>
-          
       </div>
       <div className='flex items-center justify-center gap-[30px] mt-[40px] mx-[26px]'>
           <div className='w-1/2'>
@@ -188,37 +180,7 @@ const WebinarPage = (buttonClass = '',) => {
                   </div>
                 <span className="font-semibold text-[var(--highlight-color)] text-[14px] leading-[17px] tracking-[0]">02 February 2024, 09:00AM EST</span>
                 </div>
-                <div className="flex items-center gap-[4px] md:gap-[4px] mb-[10px]  rounded-[10px]">
-                  {/* Days */}
-                  <div className="flex flex-col items-center justify-center bg-[#F5F7F9] rounded-[10px] p-[12px] w-[53px] h-[53px]" data-label="days" data-value="0">
-                    <b className="text-[16px] md:text-[16px] text-[var(--text-primary)] font-semibold">21</b>
-                    <span className="text-[10px] md:text-[10px] font-normal text-[#40658B]">Days</span>
-                  </div>
-
-                  <span className="text-xl text-[var(--text-primary)] font-semibold">:</span>
-
-                  {/* Hours */}
-                  <div className="flex flex-col items-center justify-center bg-[#F5F7F9] rounded-[10px] p-12px w-[53px] h-[53px]" data-label="hours" data-value="3">
-                    <b className="text-[16px] md:text-[16px] text-[var(--text-primary)] font-semibold">08</b>
-                    <span className="text-[10px] md:text-[10px] font-normal text-[#40658B]">Hours</span>
-                  </div>
-
-                  <span className="text-xl text-[var(--text-primary)] font-semibold">:</span>
-
-                  {/* Minutes */}
-                  <div className="flex flex-col items-center justify-center bg-[#F5F7F9] rounded-[10px] p-12px w-[53px] h-[53px]" data-label="minutes" data-value="40">
-                    <b className="text-[16px] md:text-[16px] text-[var(--text-primary)] font-semibold">35</b>
-                    <span className="text-[10px] md:text-[10px] font-normal text-[#40658B]">Minutes</span>
-                  </div>
-
-                  <span className="text-xl text-[var(--text-primary)] font-semibold">:</span>
-
-                  {/* Seconds */}
-                  <div className="flex flex-col items-center justify-center bg-[#F5F7F9] rounded-[10px] p-12px w-[53px] h-[53px]" data-label="seconds" data-value="2">
-                    <b className="text-[16px] md:text-[16px] text-[var(--text-primary)] font-semibold">09</b>
-                    <span className="text-[10px] md:text-[10px] font-normal text-[#40658B]">Seconds</span>
-                  </div>
-                </div>
+                <CountdownTimer bgColor="#F5F7F9" />
               </div>
             </div>
           </div>
@@ -293,6 +255,8 @@ const WebinarPage = (buttonClass = '',) => {
             </div>
           </div>
       </div>
+      <AdminQuoteSection />
+      <AdminVipBoard />
     </>
   )
 }

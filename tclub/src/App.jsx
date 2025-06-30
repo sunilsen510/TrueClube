@@ -1,6 +1,4 @@
-import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css'
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import Footer from './components/Footer';
@@ -13,22 +11,23 @@ import ContactPage from './pages/ContactPage';
 import ErrorPage from './pages/ErrorPage';
 import BlogDeatailsPage from './pages/BlogDeatailsPage';
 import HeroesPage from './pages/HeroesPage';
+
+// Admin
 import AdminLayout from './pages/admin/AdminLayout';
 import Dashboard from './pages/admin/Dashboard';
 import ProfilePage from './pages/admin/ProfilePage';
 import WebinarPage from './pages/admin/WebinarPage';
 import RewardsPage from './pages/admin/RewardsPage';
-import AdminPage from './pages/admin/AdminPage';
 import Notification from './pages/admin/Notification';
 
+import './App.css';
+
 function App() {
-
-
   return (
-    <>
-      <BrowserRouter>
+    <BrowserRouter>
       <Header />
       <Routes>
+        {/* Public Routes */}
         <Route path='/' element={<HomePage />} /> 
         <Route path='/upcomingseminar' element={<HomeSeminar />} />
         <Route path='/seminar' element={<SeminarPage />} />
@@ -38,11 +37,10 @@ function App() {
         <Route path='/details' element={<BlogDeatailsPage />} />
         <Route path='/healths' element={<HealthPage />} />
         <Route path='/contact' element={<ContactPage />} />
-        <Route path='/error' element={<ErrorPage/>} />
+        <Route path='/error' element={<ErrorPage />} />
 
-        {/* Admin Routes */}
+        {/* Admin Layout with Nested Routes */}
         <Route path="/admin" element={<AdminLayout />}>
-          <Route path="admin" element={<AdminPage />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="profile" element={<ProfilePage />} />
           <Route path="webinar" element={<WebinarPage />} />
@@ -52,8 +50,7 @@ function App() {
       </Routes>
       <Footer />
     </BrowserRouter>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;

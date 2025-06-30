@@ -1,7 +1,7 @@
 import React from 'react';
 import Ystar from '../../assets/yStar.svg';
 import Bstar from '../../assets/bStar.svg';
-import VipBadge from '../../components/vipBadge';
+import VipBadge from '../../components/VipBadge';
 
 
 const RewardsPage = () => {
