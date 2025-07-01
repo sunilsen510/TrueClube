@@ -138,7 +138,7 @@ const Banner = ({
             <div
               className={`w-full ${
                 image
-                  ? `lg:w-full md:w-full text-left justify-center lg:text-left sm:text-center px-4 sm:px-0 max-w-screen-lg mx-auto lg:!mb-0 py-[30px] lg:py-[90px] xl:py-[90px] md:py-[50px] sm:!py-[90px] ${paddingY}  md:text-center`
+                  ? `lg:w-full md:w-full sm:w-auto text-left justify-center lg:text-left sm:text-center px-4 sm:px-0 max-w-screen-lg mx-auto lg:!mb-0 py-[30px] lg:py-[90px] xl:py-[90px] md:py-[50px] sm:!py-[90px] ${paddingY}  md:text-center`
                   : 'max-w-7xl mx-auto text-center mb-2 px-4 sm:px-6 pt-[50px] lg:pt-0 md:pt-[50px]'
               }`}
             >
@@ -165,7 +165,7 @@ const Banner = ({
                     label={primaryButtonLabel}
                     to={primaryButtonLink}
                     variant="outline"
-                    className="
+                    className=" sm:w-[300px]
                       shadow-[var(--btn-shadow)]
                       !px-[22px] sm:!px-[24px] md:!px-[26px] lg:!px-[30px]
                       !py-[16px] sm:!py-[18px] md:!py-[20px] lg:!py-[24px]

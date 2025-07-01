@@ -23,11 +23,11 @@ const VipBadge = ({ children, showBorder = true }) => {
         }`}
 >
   <div className="w-full">
-    <ul className="flex flex-col gap-[35px]">
+    <ul className="flex flex-col xl:gap-[35px] lg:gap-[20px] md:gap-[10px]">
       {users.map((user, index) => (
         <li
           key={user.id}
-          className={`w-full flex items-center justify-between gap-4 py-[12px] pl-[16px] pr-[26px] rounded-[10px] ${
+          className={`w-full flex items-center justify-between lg:gap-4 py-[12px] pl-[16px] pr-[26px] rounded-[10px] ${
             index % 2 === 0 ? 'bg-[#F7F8FA]' : ''
           }`}
         >
@@ -39,7 +39,7 @@ const VipBadge = ({ children, showBorder = true }) => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h4 className="text-[14px] font-semibold">{user.name}</h4>
+            <h4 className="lg:text-[14px] text-[12px]   font-semibold">{user.name}</h4>
           </div>
 
           <div className="w-[62px] flex items-center justify-center gap-2 bg-[var(--vip-bg)] text-white text-xs font-bold py-[6px] px-[10px] rounded-2xl">

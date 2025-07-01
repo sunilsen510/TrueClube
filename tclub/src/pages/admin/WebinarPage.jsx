@@ -35,21 +35,18 @@ const WebinarPage = (buttonClass = '',) => {
         </div>
       </div>
       
-      <div className='flex items-center justify-center gap-[30px] mt-[40px] mx-[26px]'>
-          <div className='w-1/2'>
-            <div className='flex items-center gap-[20px] rounded-[11px]  bg-[#ffffff] border border-[#D4DEEB]  p-[30px]'>
-              <div className='w-[254px] h-[162px]'>
+      <div className='flex items-center flex-col xl:flex-row lg:flex-col md:flex-col justify-center gap-[30px] mt-[40px] 2xl:mx-[26px] lg:mx-0'>
+          <div className='xl:w-1/2 2xl:w-1/2 lg:w-full md:w-full sm:w-full w-full'>
+            <div className='flex items-center gap-[20px] rounded-[11px] flex-col xl:flex-row lg:flex-row md:flex-col sm:flex-col  bg-[#ffffff] border border-[#D4DEEB]  p-[30px]'>
+              <div className="w-full h-auto lg:w-[254px] lg:h-[162px]">
                 <img
                   src={timerImg}
                   alt="timerImg"
                   className="
-                  w-full 
+                  !w-full 
                   !h-full
-                  xs2:w-full 
-                  sm:w-full 
-                  md:w-[156px] md:h-[110px] 
-                  lg:w-[254px] lg:h-[132px] 
-                  xl:w-[254px] xl:h-[132px] 
+                  !xs2:w-full 
+                  !sm:w-full 
                   object-cover 
                   rounded-xl
                   "
@@ -94,17 +91,17 @@ const WebinarPage = (buttonClass = '',) => {
               </div>
             </div>
           </div>
-           <div className='w-1/2'>
-            <div className='flex items-center gap-[20px] rounded-[11px]  bg-[#ffffff] border border-[#D4DEEB]  p-[30px]'>
-              <div className='w-[254px] h-[162px]'>
+           <div className='xl:w-1/2 2xl:w-1/2 lg:w-full md:w-full sm:w-full w-full '>
+           <div className='flex items-center gap-[20px] rounded-[11px] flex-col xl:flex-row lg:flex-row md:flex-col sm:flex-col  bg-[#ffffff] border border-[#D4DEEB]  p-[30px]'>
+              <div className="w-full h-auto lg:w-[254px] lg:h-[162px]">
                 <img
                   src={timerImg}
                   alt="timerImg"
                   className="
-                  w-full 
+                  !w-full 
                   !h-full
                   xs2:w-full 
-                  sm:w-full 
+                  !sm:w-full 
                   md:w-[156px] md:h-[110px] 
                   lg:w-[254px] lg:h-[132px] 
                   xl:w-[254px] xl:h-[132px] 
@@ -139,18 +136,18 @@ const WebinarPage = (buttonClass = '',) => {
             </div>
           </div>
       </div>
-      <div className='flex items-center justify-center gap-[30px] mt-[40px] mx-[26px]'>
-          <div className='w-1/2'>
-            <div className='flex items-center gap-[20px] rounded-[11px]  bg-[#ffffff] border border-[#D4DEEB]  p-[30px]'>
-              <div className='w-[254px] h-[162px]'>
+      <div className='flex items-center flex-col xl:flex-row lg:flex-col md:flex-col justify-center gap-[30px] mt-[40px] 2xl:mx-[26px] lg:mx-0'>
+          <div className='xl:w-1/2 2xl:w-1/2 lg:w-full md:w-full sm:w-full w-full'>
+            <div className='flex items-center gap-[20px] rounded-[11px] flex-col xl:flex-row lg:flex-row md:flex-col sm:flex-col  bg-[#ffffff] border border-[#D4DEEB]  p-[30px]'>
+              <div className="w-full h-auto lg:w-[254px] lg:h-[162px]">
                 <img
                   src={timerImg}
                   alt="timerImg"
                   className="
-                  w-full 
+                  !w-full 
                   !h-full
                   xs2:w-full 
-                  sm:w-full 
+                  !sm:w-full 
                   md:w-[156px] md:h-[110px] 
                   lg:w-[254px] lg:h-[132px] 
                   xl:w-[254px] xl:h-[132px] 
@@ -184,7 +181,7 @@ const WebinarPage = (buttonClass = '',) => {
               </div>
             </div>
           </div>
-          <div className='w-1/2'>
+          <div className='xl:w-1/2 2xl:w-1/2 lg:w-full md:w-full sm:w-full w-full'>
             <div className="relative">
               <span
                 className="absolute top-[30px] left-0 bg-[#006AF2] px-3 py-[7px] text-[14px] leading-[16px] text-white w-[156px] h-[30px]"
@@ -196,16 +193,16 @@ const WebinarPage = (buttonClass = '',) => {
                 Expired Webinar
               </span>
             </div>
-            <div className='flex items-center gap-[20px] rounded-[11px] bg-[#ffffff] border border-[#D4DEEB] p-[30px]'>
-              <div className='w-[254px] h-[162px]'>
+            <div className='flex items-center gap-[20px] rounded-[11px] flex-col xl:flex-row lg:flex-row md:flex-col sm:flex-col  bg-[#ffffff] border border-[#D4DEEB]  p-[30px]'>
+              <div className="w-full h-auto lg:w-[254px] lg:h-[162px]">
                 <img
                   src={timerImg}
                   alt="timerImg"
                   className="
-                  w-full 
+                  !w-full 
                   !h-full
                   xs2:w-full 
-                  sm:w-full 
+                  !sm:w-full 
                   md:w-[156px] md:h-[110px] 
                   lg:w-[254px] lg:h-[132px] 
                   xl:w-[254px] xl:h-[132px] 

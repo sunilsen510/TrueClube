@@ -74,9 +74,9 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className="flex  gap-[0px] border border-[#D4DEEB] rounded-[10px] mt-[40px]">
+    <div className="flex flex-col lg:flex-col md:flex-col xl:flex-row gap-[0px] border border-[#D4DEEB] rounded-[10px] mt-[40px]">
       <div className=" p-[30px]">
-        <div className='w-[375px] pt-[24px] flex items-center justify-center gap-[20px] flex-col rounded-[11px]  bg-[#ffffff] border border-[#D4DEEB]'>
+        <div className='xl:w-[375px] lg:w-full pt-[24px] flex items-center justify-center gap-[20px] flex-col rounded-[11px]  bg-[#ffffff] border border-[#D4DEEB]'>
           <div className="w-[224px] h-[224px] rounded-full border-[11px] border-[#F5F7F9]">
             <img
               src={smileBoy}
@@ -97,12 +97,12 @@ const ProfilePage = () => {
             </div>
           </div>
         </div>  
-        <div className='w-[375px] mt-[58px] flex items-center justify-center gap-[20px] flex-col rounded-[11px]  bg-[#ffffff] border border-[#D4DEEB]'>
+        <div className='xl:w-[375px] lg:w-full  mt-[58px] flex items-center justify-center gap-[20px] flex-col rounded-[11px]  bg-[#ffffff] border border-[#D4DEEB]'>
           <div className='p-[30px]'>
             <h3 className='text-[25px] text-[#0A2540] font-semibold text-center'>Want A Break?</h3>
             <p className='text-[16px] font-normal text-[#40658B] leading-[26px] my-[25px]'>How about we temporarily deactivate the account to preserve your health tracking data?</p>
             <div className=" h-[44px] hidden md:flex items-center justify-center gap-5 bg-[#F5F7F9] rounded-full w-[157px] my-[40px] mx-auto">
-              <div className="hidden  lg:flex items-center gap-[15px] lg:gap-[0px] xl:gap-[8px] py-[5px]">
+              <div className="flex lg:flex items-center gap-[15px] lg:gap-[0px] xl:gap-[8px] py-[5px]">
                 <span className='text-[16px] font-medium text-[#40658B]'>Break</span>
                 <label className="flex items-center gap-[8px] cursor-pointer">
                   <div className="relative">
@@ -116,7 +116,7 @@ const ProfilePage = () => {
           </div>
         </div>    
       </div>    
-      <div className="w-[calc(100%-375px)] lg:w-full md:w-full relative">
+      <div className="xl:w-[calc(100%-375px)] lg:w-full md:w-full w-full relative">
         <div className="py-[20px] px-[30px] rounded-[20px]">
           <div className=''>
             <img src={editImg} alt='edit img' className="absolute top-[40px] right-[50px] -translate-x-1/2 -translate-y-1/2 cursor-pointer"

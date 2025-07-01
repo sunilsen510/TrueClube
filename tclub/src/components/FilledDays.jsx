@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import defaultImage from '../assets/fillGlass.svg';
 
 const FilledDays = ({ justify = 'center', imageSrc = defaultImage }) => {
+  const baseJustify = justify === 'end' ? 'lg:justify-end' : 'lg:justify-center';
   const totalDays = 7;
   const cupVolumeML = 250;
   const totalLiters = 2;
@@ -26,7 +27,7 @@ const FilledDays = ({ justify = 'center', imageSrc = defaultImage }) => {
   const remainingLiters = totalLiters - (cupVolumeML * filledDays) / 1000;
 
   return (
-    <div className={`flex items-center justify-${justify} gap-[30px] mb-[30px]`}>
+    <div className={`flex items-center lg:justify-center md:justify-center  ${baseJustify} gap-[30px] mb-[30px]`}>
       {/* Glass Container */}
       <div className="relative w-[218px] h-[329px]">
             {/* Animated Water Layer */}

@@ -24,11 +24,12 @@ const Notification = () => {
         <div className="w-20 h-1 bg-[var(--btn-primary-bg)] font-semibold rounded-full mt-[20px]"></div>
       </div>
 
-      <div className="lg:max-w-[1479px] w-full space-y-6">
+      <div className="w-full max-w-full lg:max-w-[1479px] space-y-6 mx-auto">
         {notifications.map((message, index) => (
           <div key={index} className="relative">
-            <div className="hover:bg-[#F5F7F9] hover:border-transparent transition duration-200 ml-[26px] flex items-center justify-between border border-[#DDDDE9] rounded-[10px] py-[34px]">
-              <p className="relative pl-[37px] pr-2 before:content-[''] before:absolute before:top-1/2 before:left-[15px] before:-translate-y-1/2 before:w-3 before:h-3 before:rounded-full before:bg-blue-500">
+            <div className="hover:bg-[#F5F7F9] hover:border-transparent transition duration-200 ml-[26px] flex items-center gap-0 md:gap-2 justify-between border border-[#DDDDE9] rounded-[10px] py-[34px]">
+              <p className="relative pl-4 sm:pl-6  lg:pl-[37px] md:pl-[10px] pr-2 before:content-[''] before:hidden before:lg:block before:md:hidden before:sm-hidden before:absolute before:top-1/2 before:left-3 before:-translate-y-1/2 
+                before:w-3 before:h-3 before:rounded-full before:bg-blue-500">
                 {message}
               </p>
               <span className="pr-[10px] text-sm font-normal text-[#40658B]">10 Min ago</span>

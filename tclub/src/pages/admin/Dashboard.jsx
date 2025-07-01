@@ -24,11 +24,11 @@ const Dashboard = () => {
       <div className='mt-[34px] rounded-[10px] relative'>
         <Banner
           title="DID YOU COMPLETE YOUR TASK?"
-          titleSize="xl:text-[40px] lg:text-[35px] md:text-[30px]"
+          titleSize="xl:text-[40px] lg:text-[35px] md:text-[30px] text-[20px] sm:text-[24px] text-center lg:text-start md:text-center sm:text-center"
           image={tGirls}
           width={525}
           height={225}
-          minHeight="lg:min-h-[258px]"
+          minHeight="lg:min-h-[258px] sm:min-h-[220px] md:min-h-[240px] lg:min-h-[258px]"
           subtitle={false}
           primaryButtonLabel="Yes I Have Completed My Task"
           primaryButtonLink="/task-page"
@@ -40,8 +40,8 @@ const Dashboard = () => {
           objectFit="object-cover"
           objectPosition="object-center"
           lineHeight='xl:leading-[48px] lg:leading-[40px] md:leading-[35px]'
-          gapClass='!gap-[0px]'
-          padleft='!pl-[40px]'
+          gapClass='!gap-[0px] gap-[12px] sm:gap-[16px] md:gap-[20px] lg:gap-[24px]'
+          padleft='!pl-[40px] pl-[16px] sm:pl-[24px] md:pl-[32px] lg:pl-[40px]'
         />
         <div>
           <img src={cClose} alt='Close count' className="absolute top-[25px] right-[15px] -translate-x-1/2 -translate-y-1/2 cursor-pointer" />
@@ -55,11 +55,11 @@ const Dashboard = () => {
             </h2>
             <div className="w-20 h-1 bg-[var(--btn-primary-bg)] font-semibold rounded-full mt-[20px]"></div>
               <div className='mt-[30px] relative'>
-                <div className='flex items-center justify-center gap-[30px]'>
-                  <div className='w-full lg:w-1/2 md:w-full'><FilledDays justify="end" /></div>
-                  <div className='w-full lg:w-1/2 md:w-full'><FilledDays imageSrc={customGlass}/></div>
+                <div className='flex items-center justify-center gap-[30px] flex-col md:flex-col lg:flex-row'>
+                  <div className='w-full lg:w-1/2 md:w-full'><FilledDays justify='end' /></div>
+                  <div className='w-full lg:w-1/2 md:w-full'><FilledDays imageSrc={customGlass} justify='center'/></div>
                 </div>
-                <div className='absolute bottom-[30px] left-[30px]'>
+                <div className='absolute bottom-[30px] left-[30px] md:hidden lg:hidden xl:hidden 2xl:block'>
                   <img src={glassImgs} alt='glass image' className='' />
                 </div>
               </div>
@@ -67,7 +67,7 @@ const Dashboard = () => {
         </div>
       </div>
       <div className="mt-[30px]">
-        <div className="border border-[#DDDDE9] pt-[30px] pl-[40px] rounded-[10px] flex flex-col lg:flex-row justify-between gap-[30px]">
+        <div className="border border-[#DDDDE9] pt-[30px] p-[20px] xl:pl-[40px] lg:p-[30px] md:p-[20px]  rounded-[10px] flex flex-col lg:flex-col xl:flex-row items-center justify-center lg:justify-between gap-[30px]">
           
           {/* Left Content */}
           <div className="flex-1">
@@ -103,7 +103,7 @@ const Dashboard = () => {
           </div>
 
           {/* Right Image */}
-          <div className=" pr-[40px] flex-shrink-0 w-[292px] h-[251px]">
+          <div className=" lg:pr-[40px] pr-[0px] flex items-center justify-center w-[292px] h-[251px] ">
             <img src={yogaBoy} alt="Yoga Boy" className="w-full h-full object-contain" />
           </div>
         </div>

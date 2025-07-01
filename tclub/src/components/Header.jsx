@@ -32,7 +32,7 @@ const authButtons = [
   },
 ];
 
-const Header = () => {
+const Header = ({ toggleSidebar }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
@@ -133,12 +133,20 @@ const Header = () => {
 
         {/* Mobile Menu Icon */}
         <div className="block lg:hidden ml-auto">
-          <button
-            onClick={toggleMenu}
-            className="text-[var(--text-muted)] focus:outline-none"
+        <button
+            onClick={toggleSidebar}
+            className="lg:hidden  mr-[10px] focus:outline-none text-[var(--text-muted)]"
           >
-            {menuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+          <svg className="w-[28px] h-[28px]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+        <button
+          onClick={toggleMenu}
+          className="text-[var(--text-muted)] focus:outline-none"
+        >
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
         </div>
       </div>
 
