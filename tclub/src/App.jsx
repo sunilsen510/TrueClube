@@ -39,13 +39,17 @@ function App() {
         <Route path='/contact' element={<ContactPage />} />
         <Route path='/error' element={<ErrorPage />} />
 
-        {/* Admin Layout with Nested Routes */}
-        <Route path="/admin" element={<AdminLayout />}>
+          <Route path="/admin" element={<AdminLayout />}>
+          {/* Shows by default on /admin */}
+          <Route index element={<WebinarPage />} />
+          {/* Valid nested routes */}
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="profile" element={<ProfilePage />} />
           <Route path="webinar" element={<WebinarPage />} />
           <Route path="rewards" element={<RewardsPage />} />
           <Route path="notification" element={<Notification />} />
+          {/* Catch-all for /admin/unknown-routes */}
+          <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
       <Footer />

@@ -76,7 +76,7 @@ const Dashboard = () => {
           <div className="border border-[#DDDDE9] pt-[30px] p-[20px] xl:pl-[40px] lg:p-[30px] md:p-[20px]  rounded-[10px] flex flex-col lg:flex-col xl:flex-row items-center justify-center lg:justify-between gap-[30px]">
             
             {/* Left Content */}
-            <div className="flex-1">
+            <div className="flex-1 md:w-full">
               <h2 className="text-[25px] sm:text-[22px] md:text-[26px] lg:text-[30px] font-medium leading-[27px] tracking-[0] text-[var(--text-primary)] text-start">
                 Quote Of The Day
               </h2>
@@ -87,8 +87,8 @@ const Dashboard = () => {
                 <div className="relative bg-[#006AF2] rounded-[10px] w-full pl-[72px] py-[32px] overflow-hidden">
                   {/* Animated Blur Progress Layer */}
                   <div
-                    className={`absolute z-1 top-0 right-0 h-full ${width}
-                      backdrop-blur-[9px]  
+                    className={`absolute lg:z-1 top-0 right-0 h-full ${width}
+                      backdrop-blur-[9px]  md:backdrop-blur-0 md:z-[-1]  
                       bg-gradient-to-r from-white/10 to-[#006AF2]/100
                       shadow-lg
                       border border-white/20 

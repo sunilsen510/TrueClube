@@ -32,7 +32,7 @@ const DropDown = () => {
       >
         <span className="font-bold text-[18px] text-[#0A2540] cursor-pointer">Jane Cooper</span>
         <ChevronDown
-          className={`w-5 h-5 text-[#0A2540] transform transition-transform duration-200 ${
+          className={`w-5 h-5 text-[#0A2540] transform transition-transform duration-200 cursor-pointer ${
             open ? "rotate-180" : ""
           }`}
         />

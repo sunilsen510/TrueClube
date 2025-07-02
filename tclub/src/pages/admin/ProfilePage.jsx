@@ -99,9 +99,9 @@ const ProfilePage = () => {
         </div>  
         <div className='xl:w-[375px] lg:w-full  mt-[58px] flex items-center justify-center gap-[20px] flex-col rounded-[11px]  bg-[#ffffff] border border-[#D4DEEB]'>
           <div className='p-[30px]'>
-            <h3 className='text-[25px] text-[#0A2540] font-semibold text-center'>Want A Break?</h3>
+            <h3 className='text-[25px] text-[#0A2540] font-semibold leading-[27px] text-center'>Want A Break?</h3>
             <p className='text-[16px] font-normal text-[#40658B] leading-[26px] my-[25px]'>How about we temporarily deactivate the account to preserve your health tracking data?</p>
-            <div className=" h-[44px] hidden md:flex items-center justify-center gap-5 bg-[#F5F7F9] rounded-full w-[157px] my-[40px] mx-auto">
+            <div className=" h-[44px] hidden md:flex items-center justify-center gap-5 bg-[#F5F7F9] rounded-full w-[157px] mt-[25px] mx-auto">
               <div className="flex lg:flex items-center gap-[15px] lg:gap-[0px] xl:gap-[8px] py-[5px]">
                 <span className='text-[16px] font-medium text-[#40658B]'>Break</span>
                 <label className="flex items-center gap-[8px] cursor-pointer">
@@ -202,7 +202,7 @@ const ProfilePage = () => {
         </div>
 
         <div className="py-[20px] px-[30px] rounded-[20px]">
-          <div className="bg-white pt-[30px]  rounded-[20px]">
+          <div className="bg-white pt-[20px]  rounded-[20px]">
             <h2 className="text-[25px] sm:text-[22px] md:text-[26px] lg:text-[30px] font-medium leading-[27px] tracking-[0] text-[var(--text-primary)] text-start">
               Change Password
             </h2>
@@ -242,7 +242,7 @@ const ProfilePage = () => {
                 ))}
               </div>
 
-              <div className="flex justify-end">
+              <div className="flex justify-end lg:mb-[80px] md:mb-0">
                 <div className="w-max">
                   <CustomButton
                     type="submit"

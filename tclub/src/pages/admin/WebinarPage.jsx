@@ -25,7 +25,7 @@ const WebinarPage = (buttonClass = '',) => {
           {/* Only show on admin page, hide on /webinar */}
             {location.pathname !== '/webinar' && (
               <NavLink
-                to="/webinar"
+                to="/seminar"
                 className="text-[16px] font-medium text-[var(--btn-primary-bg)] hover:underline"
               >
                 View All

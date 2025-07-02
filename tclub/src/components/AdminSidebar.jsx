@@ -67,7 +67,7 @@ const AdminSidebar = ({ buttonClass, isOpen }) => {
               className={`w-auto !py-[20px] !px-btn-x !text-[16px] !font-semibold shadow-[var(--btn-shadow)] mb-[10px] ${buttonClass}`}
             />
           </div>
-          <img src={cClose} alt='Close count' className="absolute top-[-20px] right-[0px] cursor-pointer" />
+          <img src={cClose} alt='Close count' className="absolute top-[-30px] right-[0px] cursor-pointer" />
         </div>
       )}
     </aside>

@@ -6,6 +6,8 @@ const CountdownTimer = ({
   padding = "py-[12px] px-[12px]",
   width = "w-[53px]",
   height = "h-[53px]",
+  clockgap = "gap-[4px]",
+  showDays = true 
 }) => {
   const [timeLeft, setTimeLeft] = useState({
     days: "00",
@@ -54,9 +56,7 @@ const CountdownTimer = ({
       }
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
@@ -71,34 +71,34 @@ const CountdownTimer = ({
     return () => controller.abort();
   }, []);
 
-  return (
- 
-      <div className="mb-[10px]">
-        <div className="flex items-center justify-center gap-[4px] md:gap-[4px] clock-container">
-          {["days", "hours", "minutes", "seconds"].map((label, idx) => (
-            <React.Fragment key={label}>
-              <div
-                 className={`flex items-center flex-col justify-center rounded-lg ${padding} ${width} ${height}`}
-                style={{ backgroundColor: bgColor }}
-                data-label={label}
-              >
-                <b className={`${textSize} text-[var(--text-primary)] font-semibold`}>
-                  {timeLeft[label]}
-                </b>
-                <span className="text-[10px] font-normal text-[#40658B]">
-                  {label.charAt(0).toUpperCase() + label.slice(1)}
-                </span>
-              </div>
-              {idx !== 3 && (
-                <span className="text-xl text-[var(--text-primary)] font-semibold">
-                  :
-                </span>
-              )}
-            </React.Fragment>
-          ))}
-        </div>
-      </div>
+  const labels = showDays
+    ? ["days", "hours", "minutes", "seconds"]
+    : ["hours", "minutes", "seconds"]; // hide days if prop is false
 
+  return (
+    <div className="mb-[10px]">
+      <div className={`flex items-center justify-center ${clockgap} clock-container`}>
+        {labels.map((label, idx) => (
+          <React.Fragment key={label}>
+            <div
+              className={`flex items-center flex-col justify-center rounded-lg ${padding} ${width} ${height}`}
+              style={{ backgroundColor: bgColor }}
+              data-label={label}
+            >
+              <b className={`${textSize} text-[var(--text-primary)] font-semibold`}>
+                {timeLeft[label]}
+              </b>
+              <span className="text-[10px] font-normal text-[#40658B]">
+                {label.charAt(0).toUpperCase() + label.slice(1)}
+              </span>
+            </div>
+            {idx !== labels.length - 1 && (
+              <span className="text-xl text-[var(--text-primary)] font-semibold">:</span>
+            )}
+          </React.Fragment>
+        ))}
+      </div>
+    </div>
   );
 };
 
