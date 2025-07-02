@@ -16,6 +16,8 @@ const RewardsPage = () => {
 
   return (
     <>
+    <div className='lg:mx-[50px] md:mx-[20px] mx-[20px]'>
+
       <div className="bg-white mt-[50px] rounded-[20px] px-[26px]">
         <h2 className="text-[25px] sm:text-[22px] md:text-[26px] lg:text-[30px] font-medium leading-[27px] tracking-[0] text-[var(--text-primary)] text-start">
           Rewards
@@ -23,7 +25,7 @@ const RewardsPage = () => {
         <div className="w-20 h-1 bg-[var(--btn-primary-bg)] font-semibold rounded-full mt-[20px]"></div>
       </div>
 
-      <div className="mt-[40px] border border-[#DDDDE9] flex flex-col md:flex-col lg:flex-row items-center justify-between gap-4 lg:gap-4 md:gap-4 xl:p-[40px] lg:p-[20px] p-[20px] md:p-[20px] rounded-[10px] mb-[50px] lg:mx-[26px] mx-0">
+      <div className="mt-[40px] border border-[#DDDDE9] flex flex-col md:flex-col lg:flex-row items-center justify-between gap-4 lg:gap-4 md:gap-4 xl:p-[40px] lg:p-[20px] p-[20px] md:p-[20px] rounded-[10px] mb-[50px]">
         <div>
           <h4 className="text-[25px] font-semibold text-[#0A2540] leading-[27px] mb-[25px]">
             Your Rewards As Stars
@@ -58,7 +60,7 @@ const RewardsPage = () => {
               </h2>
               <div className="w-20 h-1 bg-[var(--btn-primary-bg)] font-semibold rounded-full mt-[20px]"></div>
         </div>
-        <div className="flex xl:flex-row flex-col lg:flex-col md:flex-col  items-center justify-between p-[10px] lg:p-[30px] md:p-[20px] sm:p-[20px]  lg:gap-[35px] md:gap-[20px] border border-[#DDDDE9] rounded-[10px] lg:mx-[26px] mx-0 mt-[40px]">
+        <div className="flex xl:flex-row flex-col lg:flex-col md:flex-col  items-center justify-between p-[10px] lg:p-[30px] md:p-[20px] sm:p-[20px]  lg:gap-[35px] md:gap-[20px] border border-[#DDDDE9] rounded-[10px]  my-[40px]">
             <div className="w-full">
               <VipBadge showBorder={false} />
             </div>
@@ -70,6 +72,7 @@ const RewardsPage = () => {
             </div>
         </div>
       </div> 
+    </div>
     </>
   );
 };

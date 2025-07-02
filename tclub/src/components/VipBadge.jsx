@@ -23,7 +23,7 @@ const VipBadge = ({ children, showBorder = true }) => {
         }`}
 >
   <div className="w-full">
-    <ul className="flex flex-col xl:gap-[35px] lg:gap-[20px] md:gap-[10px]">
+    <ul className="flex flex-col">
       {users.map((user, index) => (
         <li
           key={user.id}

@@ -17,6 +17,7 @@ const Notification = () => {
 
   return (
     <>
+    <div className='lg:mx-[50px] md:mx-[20px] mx-[20px] mb-10'>
       <div className="bg-white mt-[50px] mb-[40px] rounded-[20px] px-[26px]">
         <h2 className="text-[25px] sm:text-[22px] md:text-[26px] lg:text-[30px] font-medium leading-[27px] tracking-[0] text-[var(--text-primary)] text-start">
           Notification
@@ -24,15 +25,17 @@ const Notification = () => {
         <div className="w-20 h-1 bg-[var(--btn-primary-bg)] font-semibold rounded-full mt-[20px]"></div>
       </div>
 
-      <div className="w-full max-w-full lg:max-w-[1479px] space-y-6 mx-auto">
+      <div className="w-full max-w-full lg:max-w-[1479px]">
         {notifications.map((message, index) => (
-          <div key={index} className="relative">
-            <div className="hover:bg-[#F5F7F9] hover:border-transparent transition duration-200 ml-[26px] flex items-center gap-0 md:gap-2 justify-between border border-[#DDDDE9] rounded-[10px] py-[34px]">
-              <p className="relative pl-4 sm:pl-6  lg:pl-[37px] md:pl-[10px] pr-2 before:content-[''] before:hidden before:lg:block before:md:hidden before:sm-hidden before:absolute before:top-1/2 before:left-3 before:-translate-y-1/2 
-                before:w-3 before:h-3 before:rounded-full before:bg-blue-500">
+          <div key={index} className="relative mb-5 last:!mb-0">
+            <div className="hover:bg-[#F5F7F9]  hover:border-transparent transition duration-200 flex items-center flex-col sm:flex-row sm:items-center sm:justify-between 
+                sm:gap-2 gap-0 md:gap-2 justify-between border border-[#DDDDE9] rounded-[10px] py-[34px] sm:py-[34px]">
+              <p className="relative pl-4 sm:pl-6 leading-[19px] flex-nowrap lg:pl-[37px] md:pl-[10px] pr-2 before:content-[''] before:hidden before:lg:block before:md:hidden before:sm-hidden before:absolute before:top-1/2 before:left-3 before:-translate-y-1/2 
+                before:w-3 before:h-3 before:rounded-full before:bg-blue-500 text-sm sm:text-base break-words lg:max-w-full sm:max-w-[840px]">
                 {message}
               </p>
-              <span className="pr-[10px] text-sm font-normal text-[#40658B]">10 Min ago</span>
+              
+              <span className="pr-[10px] text-sm font-normal text-[#40658B] hidden md:hidden lg:block">10 Min ago</span>
             </div>
 
             <div
@@ -44,6 +47,7 @@ const Notification = () => {
           </div>
         ))}
       </div>
+    </div>
     </>
   );
 };

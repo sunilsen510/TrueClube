@@ -25,7 +25,7 @@ function AdminLayout({ buttonClass = '' }) {
 
         {/* Main Content Section */}
         <Header toggleSidebar={toggleSidebar} />
-        <main className="flex-1 p-6 pt-[93px]">
+        <main className="flex-1 pt-[93px]">
           <Outlet />
         </main>
       </div>

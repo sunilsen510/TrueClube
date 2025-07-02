@@ -27,7 +27,7 @@ const AdminQuoteSection = () => {
                 {/* Animated Blur Progress Layer */}
                 <div
                   className={`absolute z-1 top-0 right-0 h-full ${width}
-                    backdrop-blur-[32px]  
+                    backdrop-blur-[9px]  
                     bg-gradient-to-r from-white/10 to-[#006AF2]/100
                     shadow-lg
                     border border-white/20 

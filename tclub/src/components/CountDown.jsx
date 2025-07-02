@@ -15,7 +15,7 @@ const CountdownTimer = ({
   });
 
   useEffect(() => {
-    const targetDate = new Date("August 15, 2025  20:04:40").getTime();
+    const targetDate = new Date("August 30, 2025  13:05:40").getTime();
     const controller = new AbortController();
 
     const animationInterval = (ms, signal, callback) => {
@@ -73,7 +73,7 @@ const CountdownTimer = ({
 
   return (
  
-      <div>
+      <div className="mb-[10px]">
         <div className="flex items-center justify-center gap-[4px] md:gap-[4px] clock-container">
           {["days", "hours", "minutes", "seconds"].map((label, idx) => (
             <React.Fragment key={label}>

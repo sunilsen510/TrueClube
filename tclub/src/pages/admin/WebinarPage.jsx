@@ -11,7 +11,8 @@ const WebinarPage = (buttonClass = '',) => {
   
   return (
     <>
-      <div className="bg-white mt-[50px] mx-[26px]  rounded-[20px]">
+      <div className='lg:mx-[50px] md:mx-[20px] mx-[20px]'>
+        <div className="bg-white mt-[50px] rounded-[20px]">
         <div className='flex items-center justify-between'>
         <div>
           <h2 className="text-[25px] sm:text-[22px] md:text-[26px] lg:text-[30px] font-medium leading-[27px] tracking-[0] text-[var(--text-primary)] text-start">
@@ -35,7 +36,7 @@ const WebinarPage = (buttonClass = '',) => {
         </div>
       </div>
       
-      <div className='flex items-center flex-col xl:flex-row lg:flex-col md:flex-col justify-center gap-[30px] mt-[40px] 2xl:mx-[26px] lg:mx-0'>
+      <div className='flex items-center flex-col xl:flex-row lg:flex-col md:flex-col justify-center gap-[30px] mt-[40px]'>
           <div className='xl:w-1/2 2xl:w-1/2 lg:w-full md:w-full sm:w-full w-full'>
             <div className='flex items-center gap-[20px] rounded-[11px] flex-col xl:flex-row lg:flex-row md:flex-col sm:flex-col  bg-[#ffffff] border border-[#D4DEEB]  p-[30px]'>
               <div className="w-full h-auto lg:w-[254px] lg:h-[162px]">
@@ -85,6 +86,7 @@ const WebinarPage = (buttonClass = '',) => {
                     shadow-[var(--btn-shadow)] 
                     mb-[10px]
                     hover:!text-[16px]
+                    hover:!text-[#0A2540]
                     ${buttonClass}
                   `}
                 />      
@@ -136,7 +138,7 @@ const WebinarPage = (buttonClass = '',) => {
             </div>
           </div>
       </div>
-      <div className='flex items-center flex-col xl:flex-row lg:flex-col md:flex-col justify-center gap-[30px] mt-[40px] 2xl:mx-[26px] lg:mx-0'>
+      <div className='flex items-center flex-col xl:flex-row lg:flex-col md:flex-col justify-center gap-[30px] mt-[40px]'>
           <div className='xl:w-1/2 2xl:w-1/2 lg:w-full md:w-full sm:w-full w-full'>
             <div className='flex items-center gap-[20px] rounded-[11px] flex-col xl:flex-row lg:flex-row md:flex-col sm:flex-col  bg-[#ffffff] border border-[#D4DEEB]  p-[30px]'>
               <div className="w-full h-auto lg:w-[254px] lg:h-[162px]">
@@ -254,6 +256,7 @@ const WebinarPage = (buttonClass = '',) => {
       </div>
       <AdminQuoteSection />
       <AdminVipBoard />
+      </div>
     </>
   )
 }

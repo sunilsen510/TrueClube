@@ -37,7 +37,7 @@ const HeroBanner = ({
                 className="shadow-[8px_6px_15px_0px_#0061DE40] 
                   !px-[22px] sm:!px-[24px] md:!px-[26px] lg:!px-[30px] 
                   !py-[16px] sm:!py-[18px] md:!py-[20px] lg:!py-[24px]
-                  !text-[14px] sm:!text-[15px] md:!text-[16px] leading-[13px]"
+                  !text-[14px] sm:!text-[15px] md:!text-[16px] leading-[13px] hover:!text-[#0A2540]"
               />
               <CustomButton
                   label={primaryButtonLabel}

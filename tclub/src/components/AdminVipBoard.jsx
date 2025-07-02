@@ -10,7 +10,7 @@ const AdminVipBoard = () => {
         </h2>
         <div className="w-20 h-1 bg-[var(--btn-primary-bg)] rounded-full mt-[20px]"></div>
       </div>
-      <div className="flex xl:flex-row flex-col lg:flex-col md:flex-col  items-center justify-between p-[10px] lg:p-[30px] md:p-[20px] sm:p-[20px]  lg:gap-[35px] md:gap-[20px] border border-[#DDDDE9] rounded-[10px] mx-[26px] mt-[40px]">
+      <div className="flex xl:flex-row flex-col lg:flex-col md:flex-col mb-[40px]  items-center justify-between p-[10px] lg:p-[30px] md:p-[20px] sm:p-[20px]  lg:gap-[35px] md:gap-[20px] border border-[#DDDDE9] rounded-[10px] mt-[40px]">
             <div className="w-full">
               <VipBadge showBorder={false} />
             </div>

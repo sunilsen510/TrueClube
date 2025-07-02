@@ -170,7 +170,7 @@ const Banner = ({
                       !px-[22px] sm:!px-[24px] md:!px-[26px] lg:!px-[30px]
                       !py-[16px] sm:!py-[18px] md:!py-[20px] lg:!py-[24px]
                       !text-[14px] sm:!text-[15px] md:!text-[16px]
-                      leading-[13px]"
+                      leading-[13px] hover:!text-[#0A2540]"
                   />
                 </div>
               )}

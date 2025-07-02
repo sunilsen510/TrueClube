@@ -193,7 +193,7 @@ const NewsBlogs = () => {
                   label="Read More"
                   to="/seminarpagetwo"
                   variant="outline"
-                  className="w-auto !py-[20px] !px-[22px] !text-[14px] !font-semibold lg:w-[100%] md:w-auto sm:w-[100%] shadow-[var(--btn-shadow)]"
+                  className="w-auto hover:!text-[#0A2540] !py-[20px] !px-[22px] !text-[14px] !font-semibold lg:w-[100%] md:w-auto sm:w-[100%] shadow-[var(--btn-shadow)]"
                 />
               ) : (
                 <CustomButton

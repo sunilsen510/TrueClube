@@ -74,7 +74,7 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-col md:flex-col xl:flex-row gap-[0px] border border-[#D4DEEB] rounded-[10px] mt-[40px]">
+    <div className="flex flex-col lg:flex-col md:flex-col xl:flex-row gap-[0px] border border-[#D4DEEB] rounded-[10px] lg:my-[40px] m-[20px] lg:mx-[50px]">
       <div className=" p-[30px]">
         <div className='xl:w-[375px] lg:w-full pt-[24px] flex items-center justify-center gap-[20px] flex-col rounded-[11px]  bg-[#ffffff] border border-[#D4DEEB]'>
           <div className="w-[224px] h-[224px] rounded-full border-[11px] border-[#F5F7F9]">
@@ -232,8 +232,8 @@ const ProfilePage = () => {
                         src={show ? CeyeImg : eyeImg}
                         alt="toggle"
                         onClick={() => setShow((prev) => !prev)}
-                        className="absolute right-[15px] top-1/2 transform -translate-y-1/2 w-4 h-4 cursor-pointer"
-                      />
+                        className="absolute lg:block md:block sm:block hidden  right-[15px] top-1/2 transform -translate-y-1/2 w-4 h-4 cursor-pointer"
+                      /> 
                       {passwordErrors[field] && (
                         <p className="text-[var(--color-error)] text-xs mt-1">{passwordErrors[field].message}</p>
                       )}
